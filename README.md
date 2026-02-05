@@ -2,11 +2,8 @@ Cybersecurity/
 
 
 ├── Pre-Security/
-
 ├── Cyber Security 101/
-
 ├── Blue Team/
-
 ├── Red Team/
 
 
@@ -14,9 +11,7 @@ Cybersecurity/
 Commands/
 
 │   ├── Linux.md
-
 │   ├── Windows.md
-
 │   ├── Networking.md
 
 
@@ -24,9 +19,7 @@ Commands/
  Tools/
 
 │   ├── Nmap.md
-
 │   ├── BurpSuite.md
-
 │   ├── Wireshark.md
 
 
