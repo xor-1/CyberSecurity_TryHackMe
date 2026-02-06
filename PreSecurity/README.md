@@ -97,6 +97,5 @@ When an **ARP request** is sent, a message is broadcasted on the network to o
 
 Room completed:
 
-![[Pasted image 20260206210225.png]]
-
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260206210225.png)
 
