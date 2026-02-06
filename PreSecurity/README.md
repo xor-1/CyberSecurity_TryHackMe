@@ -49,7 +49,9 @@ Analysis of malicious software. Includes virus, trojan horse and ransomware. Ana
 
 ![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260206182127.png)
 
-## What is Networking
+## Network Fundamentals
+
+#### What is Networking:
 
 - Network
 	- Public Network
@@ -62,4 +64,39 @@ Analysis of malicious software. Includes virus, trojan horse and ransomware. Ana
 - Ping
 
 ![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260206155940.png)
+
+#### Intro to LAN:
+
+- LAN
+- Topologies
+	- Star topology
+	- Bus topology
+	- Ring topology
+- Switch
+- Router
+
+- Subnetting (dividing a network into multiple parts)
+	- Used for security and management.
+
+- ARP
+	- Map IP address to MAC Address on each port in a network.
+	- Types of Signals by ARP:
+		- ARP Request
+		- ARP Reply.
+
+When an **ARP request** is sent, a message is broadcasted on the network to other devices asking, "What is the mac address that owns this IP address?" When the other devices receive that message, they will only respond if they own that IP address and will send an **ARP reply** with its MAC address. The requesting device can now remember this mapping and store it in its **ARP cache** for future use.
+
+- DHCP:
+	- IP addresses can be assigned **manually** or **automatically using DHCP**. With DHCP, a device requests an IP when it joins a network, the DHCP server offers one, the device accepts it, and the server confirms—allowing the device to start using the IP address.
+	- Requests:
+		- DHCP discover
+		- DHCP offer
+		- DHCP request
+		- DHCP ACK
+
+
+Room completed:
+
+![[Pasted image 20260206210225.png]]
+
 
