@@ -3,7 +3,7 @@
 
 "[Gobuster](https://github.com/OJ/gobuster)" Gobuster will take a list of potential page or directory names and try accessing a website with each of them; if the page exists, it tells you.
 
-![[Pasted image 20260206160704.png]]
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260206160704.png)
 #### SOC
 
 **Security Operations Center (SOC)** is a team of IT security professionals tasked with monitoring, preventing , detecting , investigating, and responding to threats within a company’s network and systems.
@@ -43,11 +43,11 @@ Phases include:
 
 Analysis of malicious software. Includes virus, trojan horse and ransomware. Analysis techniques mainly includes static and dynamic analysis.
 
-![[Pasted image 20260206161040.png]]
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260206161040.png)
 
 #### Careers in Cyber Security
 
-![[Pasted image 20260206182127.png]]
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260206182127.png)
 
 ## What is Networking
 
@@ -61,5 +61,5 @@ Analysis of malicious software. Includes virus, trojan horse and ransomware. Ana
 - MAC Spoofing
 - Ping
 
-![[Pasted image 20260206155940.png]]
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260206155940.png)
 
