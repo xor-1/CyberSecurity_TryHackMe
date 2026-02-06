@@ -12,7 +12,7 @@
 > *If a patch is not available, organizations must implement alternative measures to safeguard the system and mitigate potential exploitation.*
 
 
-***swag voucher: - KUWCTJ-79O2GR-GPYP8H-H5AL4G***
+***swag voucher: - <!-- KUWCTJ-79O2GR-GPYP8H-H5AL4G -->***
 
 #### Threat Intelligence
 
