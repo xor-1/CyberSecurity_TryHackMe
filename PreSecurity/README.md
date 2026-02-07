@@ -163,9 +163,10 @@ Room completed:
 
 #### OSI Dungeon Escaped:
 
-![[Pasted image 20260207164000.png]]
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260207164000.png)
 
 
 #### Completed:
 
-![[Pasted image 20260207164057.png]]
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260207164057.png)
+
