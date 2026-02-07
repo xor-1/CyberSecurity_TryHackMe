@@ -294,7 +294,7 @@ Studied about common ports (0 - 1024) For example:
 
 ## **Completed:**
 
-![[Pasted image 20260208004555.png]]
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260207164057.png)
 
 ---
 
