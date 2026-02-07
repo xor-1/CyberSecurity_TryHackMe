@@ -189,6 +189,7 @@ Room completed:
 #### OSI Dungeon Escaped:
 
 ![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260207164000.png)
+hehe, I just beat their team record of 19 seconds!
 
 
 ---
