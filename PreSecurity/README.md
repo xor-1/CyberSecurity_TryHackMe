@@ -401,3 +401,39 @@ These are the security devices in cyber security used to filter traffic based on
 
 Stopping a DOS attack and blocking the attacker's IP on port 80.
 
+---
+
+
+#### VPN:
+- Virtual Private Network
+- Allows devices to communicate securely by creating a tunnel. It also allows different networks (offices and businesses) to connect securely.
+- If two networks are connected via a tunnel through two devices then instead of whole networks only that 2 devices are able to communicate with each other.
+- offers anonymity, privacy and secure distant connections.
+
+##### VPN Technologies:
+- PPP
+- PPTP
+- IPSec
+
+
+---
+
+
+#### LAN Networking Devices:
+
+##### Router:
+Routes data between network so called router. Already discussed above.
+
+##### Switch:
+Connects multiple devices in a network ranging from 3 to 63. Switches are of layer 2 and layer 3.
+Layer 3 switches work in terms of VLANs.
+
+
+**Room Completed:**
+
+![[Pasted image 20260208213352.png]]
+
+
+---
+
+
