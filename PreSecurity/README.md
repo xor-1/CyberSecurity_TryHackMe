@@ -201,9 +201,9 @@ hehe, I just beat their team record of 19 seconds!
 
 ---
 
-## Packets and Frames:
+#### Packets and Frames:
 
-#### What are packets and frames:
+##### What are packets and frames:
 
 Packets are formed on network layer and frames are formed on data link layer after encapsulation. 
 Some notable headers in an IP packets are as follows:
@@ -240,9 +240,6 @@ Some notable headers in an IP packets are as follows:
 	- **[[#What are packets and frames | Checksum]]:** Discussed above.
 	- **Data:** The actual data for example the file.
 	- **Flag:** This header determines how the packet should be handled by either device during the handshake process.
-
-
----
 
 ##### Three way handshake messages for TCP:
 
@@ -379,3 +376,22 @@ So, this was a basic guide to netcat. It’s quite an interesting tool to use as
 ---
 
 
+#### Extending your Network:
+
+##### Port forwarding:
+If a web server is setup on a local network then PCs with in that network will be able to connect to the web server on port 80. This is intranet. If outside network is to be communicated with this web server then we will have to do port forwarding. It is done on router of server. Then the website will accessible using the public IP of the router of server.
+
+##### Firewalls:
+These are the security devices in cyber security used to filter traffic based on rules that what traffic will enter or leave the network.
+
+**These rules based on:**
+- Source IP
+- Destination IP
+- Destination Port
+- Protocol
+
+**Types of Firewalls:**
+- **Stateful Firewall:** It inspects packets based on whole connection instead of individual packets and decision making is dynamic hence consumes a lot of resources.
+- **Stateless Firewalls:** Static Firewalls, analyze individual packets. Best for large amount of data. They are dumb and if a rule is not match these firewalls are useless.
+
+![[Pasted image 20260208122708.png]]
