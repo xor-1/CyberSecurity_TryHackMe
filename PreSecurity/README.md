@@ -397,5 +397,6 @@ These are the security devices in cyber security used to filter traffic based on
 - **Stateful Firewall:** It inspects packets based on whole connection instead of individual packets and decision making is dynamic hence consumes a lot of resources.
 - **Stateless Firewalls:** Static Firewalls, analyze individual packets. Best for large amount of data. They are dumb and if a rule is not match these firewalls are useless.
 
-![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260208122708.png)
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260208122708.png) 
+Stopping a DOS attack and blocking the attacker's IP on port 80.
 
