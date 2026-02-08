@@ -431,7 +431,7 @@ Layer 3 switches work in terms of VLANs.
 
 **Room Completed:**
 
-![[Pasted image 20260208213352.png]]
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260208122708.png)
 
 
 ---
