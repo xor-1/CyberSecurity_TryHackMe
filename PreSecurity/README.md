@@ -437,3 +437,62 @@ Layer 3 switches work in terms of VLANs.
 ---
 
 
+## How the Web Works:
+
+#### DNS in detail:
+
+**DNS:**
+- Domain Name System
+- Used for converting domain names to IP addresses.
+- Instead of remembering 104.26.10.229, you can remember [tryhackme.com](http://tryhackme.com/) instead.
+
+**Domain Heirarchy:**
+- Root Domain
+- Top Level Domain
+	- gTLD (Generic Top Level Domain like .com .org .ai .store)
+	- ccTLD (Country Code Top Level Domain like .pk .ae .se)
+- Second Level Domain
+- Subdomain
+
+> Max characters in a subdomain = 63
+> Max characters in a domain name = 253
+> Cannot include _
+> Cannot start or end with a hypen
+> No consecutive hyphens
+> Just a - z and 0 - 9
+
+
+**Types of DNS Records:**
+- A Record
+- AAAA Record
+- CNAME Record
+- MX Record
+- TXT Record
+
+
+---
+
+
+#### Making a DNS request:
+- Local Cache
+- Recursive DNS (also check Cache)
+- Root server
+- TLD server
+- Authoritative server
+- Goes back to recursive server for cache
+- Returned to client made request.
+
+>A TTL is assigned to the DNS cache for future use in seconds.
+
+
+---
+
+
+**Room Completed:**
+
+![[Pasted image 20260208230941.png]]
+
+
+---
+
+
