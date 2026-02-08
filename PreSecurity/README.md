@@ -381,6 +381,9 @@ So, this was a basic guide to netcat. It’s quite an interesting tool to use as
 ##### Port forwarding:
 If a web server is setup on a local network then PCs with in that network will be able to connect to the web server on port 80. This is intranet. If outside network is to be communicated with this web server then we will have to do port forwarding. It is done on router of server. Then the website will accessible using the public IP of the router of server.
 
+
+---
+
 ##### Firewalls:
 These are the security devices in cyber security used to filter traffic based on rules that what traffic will enter or leave the network.
 
@@ -394,4 +397,5 @@ These are the security devices in cyber security used to filter traffic based on
 - **Stateful Firewall:** It inspects packets based on whole connection instead of individual packets and decision making is dynamic hence consumes a lot of resources.
 - **Stateless Firewalls:** Static Firewalls, analyze individual packets. Best for large amount of data. They are dumb and if a rule is not match these firewalls are useless.
 
-![[Pasted image 20260208122708.png]]
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260208122708.png)
+
