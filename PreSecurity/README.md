@@ -496,4 +496,15 @@ Layer 3 switches work in terms of VLANs.
 ---
 
 
-.
+#### HTTP in detrail:
+
+##### What is HTTP(S):
+- Hyper Text Transfer Protocol (Secure)
+- Used to view web pages and interact with web servers
+- Helps in transmitting webpage data, images etc
+
+**HTTPS:**
+Verifys the web server identity and is secure for communication as encrypted data moves through it.
+
+
+#### Request and Responses:
