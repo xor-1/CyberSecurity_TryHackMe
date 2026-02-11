@@ -509,4 +509,33 @@ Verifys the web server identity and is secure for communication as encrypted dat
 
 #### Request and Responses:
 
-HEELO GAURD!
+- URL (uniform Resource Locator): The path to a resource.
+- Parts of a URL:
+	- **Scheme:** This instructs on what protocol to use for accessing the resource such as HTTP, HTTPS, FTP (File Transfer Protocol).
+	- **User:** Some services require authentication to log in, you can put a username and password into the URL to log in.
+	- **Host:** The domain name or IP address of the server you wish to access.
+	- **Port:** The Port that you are going to connect to, usually 80 for HTTP and 443 for HTTPS, but this can be hosted on any port between 1 - 65535.
+	- **Path:** The file name or location of the resource you are trying to access.
+	- **Query String:** Extra bits of information that can be sent to the requested path. For example, /blog?**id=1** would tell the blog path that you wish to receive the blog article with the id of 1.
+	- **Fragment:** This is a reference to a location on the actual page requested. This is commonly used for pages with long content and can have a certain part of the page directly linked to it, so it is viewable to the user as soon as they access the page.
+- Request
+- Response
+- headers
+
+#### HTTP methods:
+- GET
+- POST
+- PUT
+- DELETE
+
+
+#### Headers:
+- Request and Response Headers
+- **Cookies:**
+	- When we request a resource from a web server. We also get back the **set-cookie** header and then browser uses it for storing data which is again forwarded to the webserver on request as HTTP is stateless and we need some type of mechanism to store our past information and help the server in recognizing us.
+	- They are also used for authentication.
+	- Use developer tools to checkout cookies and network tab for request and response.
+
+#### Room Completed:
+
+![[Pasted image 20260211224152.png]]
