@@ -538,4 +538,10 @@ Verifys the web server identity and is secure for communication as encrypted dat
 
 #### Room Completed:
 
-![[Pasted image 20260211224152.png]]
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260211224152.png)
+
+
+---
+
+
+
