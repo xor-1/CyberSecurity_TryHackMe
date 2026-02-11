@@ -544,4 +544,8 @@ Verifys the web server identity and is secure for communication as encrypted dat
 ---
 
 
-
+#### How the Web Works:
+- Two main components of a website:
+	- Front end
+	- back end
+- 
