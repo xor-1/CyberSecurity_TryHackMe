@@ -522,12 +522,18 @@ Verifys the web server identity and is secure for communication as encrypted dat
 - Response
 - headers
 
+
+---
+
+
 #### HTTP methods:
 - GET
 - POST
 - PUT
 - DELETE
 
+
+---
 
 #### Headers:
 - Request and Response Headers
@@ -549,6 +555,10 @@ Verifys the web server identity and is secure for communication as encrypted dat
 	- Front end
 	- back end
 
+
+---
+
+
 #### HTML:
 Websites are basically created using:
 - HTML : Hyper Text Markup Language. Used as a basic structure of the website.
@@ -559,9 +569,26 @@ Websites are basically created using:
 > Tip: Always check for source code first when going to test a web application.
 
 
+
+---
+
+
 #### HTML Injection:
 We can add our own html and js into the input fields and the server runs it by getting the data as input if no sanitization is done to the code.
 
 
 #### Room completed:
 ![[Pasted image 20260212114523.png]]
+
+
+---
+
+
+#### Putting it all together:
+Basic structure of a web request:
+
+```
+Request in browser ---> DNS resolve ---> connect to server ---> get resouces
+```
+
+
