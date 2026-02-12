@@ -548,4 +548,20 @@ Verifys the web server identity and is secure for communication as encrypted dat
 - Two main components of a website:
 	- Front end
 	- back end
-- 
+
+#### HTML:
+Websites are basically created using:
+- HTML : Hyper Text Markup Language. Used as a basic structure of the website.
+- CSS: Used to styling
+- JS: Used to make web pages interactive and add functionalities.
+
+
+> Tip: Always check for source code first when going to test a web application.
+
+
+#### HTML Injection:
+We can add our own html and js into the input fields and the server runs it by getting the data as input if no sanitization is done to the code.
+
+
+#### Room completed:
+![[Pasted image 20260212114523.png]]
