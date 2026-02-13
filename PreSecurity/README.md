@@ -616,3 +616,25 @@ Used to store information and data, can be complex and collection of databases. 
 Protects webserver from hacks and D/DOS attacks. It also does rate limiting. it is a basically the number of requests to a server from a specific IP.
 
 
+---
+
+
+#### Web Server:
+it is a web server software that receives requests from clients and uses HTTP to provide resources back to clients. Common web servers are ngnix, apache, IIS and NodeJS. 
+
+Default directory for linux based server:
+
+```
+/var/www/html/
+```
+
+Default directory for windows based servers:
+
+```
+C:\inetpub\wwwroot\
+```
+
+#### Virtual hosts:
+The concept of hosting multiple websites on a single web server. For this we use **Virtual Hosts**. VH is just a text based config file and matches the domain name in the request and sends the content of that website if no specific domain is found returns the default website.
+
+
