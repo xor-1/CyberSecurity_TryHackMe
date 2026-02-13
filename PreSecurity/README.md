@@ -578,7 +578,7 @@ We can add our own html and js into the input fields and the server runs it by g
 
 
 #### Room completed:
-![[Pasted image 20260212114523.png]]
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260212114523.png)
 
 
 ---
