@@ -660,4 +660,9 @@ It would output the following to the client:
 
 #### Room completed:
 
-![image]()
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260213233523.png)
+
+
+---
+
+
