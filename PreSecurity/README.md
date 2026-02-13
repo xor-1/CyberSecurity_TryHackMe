@@ -658,4 +658,6 @@ It would output the following to the client:
 <html><body>Hello adam</body></html>
 ```
 
+#### Room completed:
 
+![image]()
