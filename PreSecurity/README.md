@@ -638,3 +638,24 @@ C:\inetpub\wwwroot\
 The concept of hosting multiple websites on a single web server. For this we use **Virtual Hosts**. VH is just a text based config file and matches the domain name in the request and sends the content of that website if no specific domain is found returns the default website.
 
 
+#### Static vs Dynamic content:
+- **Static content:** The type of content that donot change with every request and is delivered as static to the client. like CSS, JS, images and maybe HTML.
+- **Dynamic content:** The type of content that changes with every request from the web server. The things you see is the processed form of HTML and other content in the **back end** and is called **front end**.
+
+
+#### Scripting and backend language:
+It make websites interactive to users. like PHP, Python, Ruby ,NodeJS, Perl etc. 
+
+If index.php was built like this:
+
+```
+<html><body>Hello <?php echo $_GET["name"]; ?></body></html>
+```
+
+It would output the following to the client:
+
+```
+<html><body>Hello adam</body></html>
+```
+
+
