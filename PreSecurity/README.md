@@ -592,4 +592,27 @@ Request in browser ---> DNS resolve ---> connect to server ---> get resouces
 ```
 
 
-hello this mahaavia
+---
+
+
+#### Load Balancers:
+Main features of a load balancer are:
+- Load management
+- Providing failover
+- Security against DDOS.
+- **health check**
+
+Load balancers work on algorithms like **ROUND-ROBIN**.
+
+#### CDN (Content Delivery Networks):
+These servers store static files from a web server and provide resources to clients if requested based on the nearest CDN server. It reduces latency and increases speed. aka edge server.
+
+
+#### Databases:
+Used to store information and data, can be complex and collection of databases. Websites can communicate with the databases and manage data. e.g. MSSQL, MYSQL, MongoDB, Postgres.
+
+
+#### WAF:
+Protects webserver from hacks and D/DOS attacks. It also does rate limiting. it is a basically the number of requests to a server from a specific IP.
+
+
