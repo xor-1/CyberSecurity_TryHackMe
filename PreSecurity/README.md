@@ -725,6 +725,14 @@ count number of entries such as in log files:
 wc -l 'file_name'
 ```
 
+finding a specific file (can also use wildcards)
+
+```
+find -name "filename.ext"
+
+find -name "*.ext"
+```
+
 Indirectly listing contents for scripting and general purpose:
 
 ```
