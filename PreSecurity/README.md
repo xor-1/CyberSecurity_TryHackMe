@@ -710,7 +710,7 @@ cd DIRECTORY
 concatenate/show contents on the terminal:
 
 ```
-cat 
+cat filename
 ```
 
 print working directory:
@@ -833,7 +833,7 @@ file filename
 
 #### Room completed:
 
-![[Pasted image 20260214165350.png]]
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260214165350.png)
 
 
 ---
@@ -937,5 +937,5 @@ This is where the important files used by the system are stores such as **passwd
 
 #### Room completed:
 
-![[Pasted image 20260215021238.png]]
+![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260215021238.png)
 
