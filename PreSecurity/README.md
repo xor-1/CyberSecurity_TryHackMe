@@ -863,3 +863,79 @@ for human-readable size of files with details we use commands:
 ls -l -h
 ```
 
+changing user on the runtime:
+
+```
+su username
+```
+
+you just need to know the password and username for the user you wish to change.
+
+> Upon changing user with the following command we land in the home directory of the new user
+
+```
+su - usernmae
+su -l username
+su --login username
+
+# all are same.
+```
+
+
+
+---
+
+
+#### understanding file permissions in numeric format:
+
+```
+rwx rwx rwx
+```
+
+- First 3 for Owner
+- Next3 for group
+- Last 3 for others
+
+- Read = 4
+- Write  = 2
+- Execute  = 1
+- Sum = 7 (depending on the permissions)
+
+the above becomes in numerical as:
+
+```
+777
+```
+
+these numerics can be used with linux command to change permissions, For example:
+
+```
+chmod 750 filename
+
+# or
+
+chmod +x filename # for giving exec permissions
+```
+
+
+---
+
+
+#### Common directories:
+
+**/etc:**
+This is where the important files used by the system are stores such as **passwd, shadow, sudoers, sudoers.d**. 
+
+**/var:** For storing variable data like which is changed regularly for example the logs. They are mostly stored as **/var/logs**.
+
+**/root:** This is the home directory of the systems root user.
+
+**/tmp:** used for storing temporary data in the system. Like memnory when system restarts the memory is wiped out.
+
+> Very Very Important Note: When a user login to a  machine, he is permissible to write in this directory so during pentesting we can save out enumrations and scripts.
+
+
+#### Room completed:
+
+![[Pasted image 20260215021238.png]]
+
