@@ -785,6 +785,81 @@ hey
 hello
 ```
 
+#### Commands from Linux Fundamentals 2:
+
+making new files:
+
+```
+touch filename
+```
+
+making new directory:
+
+```
+mkdir 'foldername'
+```
+
+copying files from one directory to another:
+
+```
+cp filename /destination
+```
+
+moving files same as cut in windows:
+
+```
+mv filename /destination
+```
+
+removing a file or folder (empty folders only):
+
+```
+rm file/folder
+```
+
+to delete them anyway use flag -f
+
+```
+rm folder -f
+```
+
+Know the type of file using its contents not by file extension:
+
+```
+file filename
+```
+
+
+
 #### Room completed:
 
 ![[Pasted image 20260214165350.png]]
+
+
+---
+
+
+#### SSH (Secure Shell):
+A protocol in encrypted form used to connect to remote machines.
+
+**How does SSH works:** We send a command through shell it is encrypted using cryptography for travelling across the network and then unencrypted again once it reaches the remote shell.
+
+#### Flags and Switches:
+used to extend the behavior of commands.
+
+use help flag to know how to use commands with flags and switches:
+
+```
+command --help
+
+# or
+
+man command
+```
+
+for human-readable size of files with details we use commands:
+
+```
+ls -l -h
+```
+
