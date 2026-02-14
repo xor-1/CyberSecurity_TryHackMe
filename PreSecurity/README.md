@@ -666,3 +666,117 @@ It would output the following to the client:
 ---
 
 
+#### Linux fundamentals:
+
+**Linux:** It is a unix based OS.
+
+It is light weight, used in websites, car entertainment systems, PoS and critical infrastructure such as traffic system and industrial sensors.
+
+
+#### Flavors of linux:
+There are several distributions of linux, e.g kali, ubuntu (server and desktop), parrot, fedora, black arch etc...
+
+*Ubuntu can run only on 512 MB of RAM!*
+
+> Linux was firstly released by Linus Torvalds in 1991.
+
+
+#### Linux commands:
+
+Output on the terminal:
+
+```
+echo "something here"
+```
+
+current user logged in:
+
+```
+whoami
+```
+
+listing files and directories:
+
+```
+ls
+```
+
+changing directory:
+
+```
+cd DIRECTORY
+```
+
+concatenate/show contents on the terminal:
+
+```
+cat 
+```
+
+print working directory:
+
+```
+pwd
+```
+
+count number of entries such as in log files:
+
+```
+wc -l 'file_name'
+```
+
+Indirectly listing contents for scripting and general purpose:
+
+```
+pwd | ls
+```
+
+Find a specific word or entry in a file:
+
+```
+grep "WORD_TO_BE_FOUND" filename.ext
+```
+
+Finding a word or entry in sub folders and all files in a directory in once:
+
+```
+grep -R "WORD_TO_BE_FOUND" /directory
+```
+
+#### Shell Operators:
+
+& shell operator allowing us to run tasks in the background and do other tasks on the terminal:
+
+```
+cp largefile.iso /path/to/destination/ &
+```
+
+joining two commands:
+This will execute the **command2** only if **command1** is successful.
+
+```
+command1 && command2
+```
+
+'>' output redirector: (saving hey to file welcome)
+
+```
+echo hey > welcome
+```
+
+'>>' output redirector but appends (donot replace):
+
+```
+echo hello >> welcome
+```
+
+not cat the file welcome and we will definitely get:
+
+```
+hey
+hello
+```
+
+#### Room completed:
+
+![[Pasted image 20260214165350.png]]
