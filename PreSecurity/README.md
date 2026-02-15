@@ -939,3 +939,90 @@ This is where the important files used by the system are stores such as **passwd
 
 ![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260215021238.png)
 
+
+---
+
+
+#### Terminal Text Editors:
+**Nano:** A simple terminal bases text editor.
+
+usage:
+
+```
+nano filename
+```
+
+You can use these features of nano by pressing the "**Ctrl**" key (which is represented as an `^` on Linux)  and a corresponding letter. For example, to exit, we would want to press "**Ctrl**" and "**X**" to exit Nano.
+
+**VIM:** A bit of advanced featured text editor as compared to **nano**.
+
+you can install it using:
+
+```
+sudo apt install vim
+```
+
+
+---
+
+
+#### Downloading files:
+
+**wget:** Allows us to download files over the HTTP. If you know the url of resource, you can simple download it in your browser.
+
+```
+wget RESOURCE_URL
+```
+
+**scp:** Allows us to securely copy files and directories from source to destination.
+
+basic format of command:
+
+```
+scp source destination
+```
+
+
+```
+# from host to remote:
+scp filename USER@IP:/PATH/
+
+# from remote to host:
+scp USER@IP:/PATH/ filename 
+```
+
+
+---
+
+
+#### Python web server:
+Ubuntu machines have python preinstalled. Python has a module **http.server** we can use this to share files over the LAN and any computer can download it.
+
+Command:
+
+```
+python -m http.server
+```
+
+users can get resources using the following commands:
+
+```
+wget
+
+# or 
+
+curl
+```
+
+use this command to remotely get files on windows (CMD):
+
+```
+powershell -Command "Invoke-WebRequest -Uri <URL> -OutFile <filename>"
+```
+
+alternatively use [updog](https://github.com/sc0tfree/updog)
+
+
+---
+
+
