@@ -16,7 +16,7 @@
 > *If a patch is not available, organizations must implement alternative measures to safeguard the system and mitigate potential exploitation.*
 
 
-***swag voucher: - <!-- KUWCTJ-79O2GR-GPYP8H-H5AL4G -->***
+***swag voucher: -  ***
 
 
 ---
@@ -1025,4 +1025,7 @@ alternatively use [updog](https://github.com/sc0tfree/updog)
 
 ---
 
+
+#### Processes:
+Processes are the programs that are running on the machine. They are managed by the kernel. Each process has been assigned a PID.
 
