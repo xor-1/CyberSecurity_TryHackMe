@@ -1026,6 +1026,39 @@ alternatively use [updog](https://github.com/sc0tfree/updog)
 ---
 
 
-#### Processes:
-Processes are the programs that are running on the machine. They are managed by the kernel. Each process has been assigned a PID.
+## Inside a Computer System:
 
+We will explore all components of a computer system to understand how they work together.
+
+#### Upon pressing the power button:
+- Press the power button
+- Start the firmware
+- Do POST (Power-On Self Test)
+- Select boot drive
+- Start boot loader
+
+![[Pasted image 20260220211829.png]]
+
+
+---
+
+
+## Computer Types:
+
+In this section I learned different types of computers like Desktops, Laptops,  workstation, servers and IoT etc...
+
+- Laptop
+- Desktop
+- Workstation
+- Server
+
+Other examples are:
+- IoT
+- Smartphones
+- Tablet
+- Embedded Computers
+
+**Q. Why we don't use a computer that does everything?**
+A. Because every design is a trade-off.
+
+There is not best computer. Its just the right tool for the job.
