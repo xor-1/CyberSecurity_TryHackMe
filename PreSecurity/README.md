@@ -1155,3 +1155,73 @@ So now we use a single physical server, and virtual machines in it and then cont
 ---
 
 
+## Cloud Fundamentals:
+
+**Cloud Computing** is the delivery of On-Demand IT services.
+The world is changing from physical infrastructure to cloud.
+
+**Benefits:**
+- Just pay for what you use
+- Easy to scale up and scale down
+- On-demand self-service: Create or remove servers fast and efficient.
+- Security: Providers protect it with strong security measures.
+- High availability: Application keeps running as if part of a system fails it is due to the virtualization.
+- Global access
+
+#### Types of cloud:
+
+##### Deployment types:
+- Public
+- Private
+- Hybrid
+
+##### Models of cloud:
+- IaaS
+- PaaS
+- SaaS
+
+##### Cloud vendors:
+That provide cloud services.
+For example:
+- AWS
+- MS Azure
+- GCP
+- Alibaba
+- IBM
+- Oracle cloud
+
+>AWS is the most common and largest cloud service provider globally.
+
+
+**Note that:**
+- **Netflix** uses AWS.
+- **Spotify**, **Instagram** and many **ecommerce** **platforms** use cloud.
+
+## DEPLOYED AN APP ON AWS LIKE CLOUD SIMULATION ON THM
+
+##### Cloud Terminologies:
+1. **EC2:** The virtual computer (can be a server) that can be added in the cloud. When we add EC2 instance, it means we add a virtual computer just like our physical computer.
+2. **Instance type:**
+	1. Determines how powerful our instance is. e.g t2, t3, m5 etc.
+	2. Bigger instance = more power + higher cost
+	3. Minor instance = less power + lower cost.
+
+#### Practical:
+Going to deploy three EC2 instances in the cloud of IaaS model in virtual environment.
+
+**Some steps to follow (General overview, they can vary from environments):**
+- Select the region
+- Goto create VM
+- Do basic config like name and type
+- Done
+
+Also analyzed the monthly cost of credits based on usage and type of instance.
+
+#### Room completed:
+
+![[Pasted image 20260221140943.png]]
+
+
+---
+
+
