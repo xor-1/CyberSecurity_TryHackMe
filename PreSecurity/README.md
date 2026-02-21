@@ -1062,3 +1062,96 @@ Other examples are:
 A. Because every design is a trade-off.
 
 There is not best computer. Its just the right tool for the job.
+
+
+![[Pasted image 20260220232651.png]]
+
+
+---
+
+
+## Client Server Basics
+
+How systems are connected to serve different purposes and how they communicate with each other.
+
+Note that client is the one who initiates the request.
+
+Components of this model:
+- Client
+- Server
+- Request
+- Response
+- Protocol: Analyzes that which standards are used in communication between client and server.
+- Port: This determines the type of service running on the server. Each service is identified by a different port. There are 65636 (0 - 65535) ports available.
+- DNS: It is a name for your website that resolves into the IP address and serves as the destination for your reqeust.
+
+#### Web communication:
+HTTPs is a stateless protocol for using on the www. This means that it doesn't retain the previous state of the user on the server.
+
+Modern web apps use mechanisms to overcome this problem by using different methods like storing session id in cookies and token to send them to server along every request otherwise we have to authenticate before every request to the server.
+
+#### HTTP Methods:
+- GET
+- POST
+- PUT
+- DELETE
+- PATCH
+- HEAD
+  OPTIONS
+- CONNECT
+- TRACE
+
+![[Pasted image 20260221070318.png]]
+
+
+**The Response is divided into two categories:**
+- Response header
+- Response body
+
+![[Pasted image 20260221070827.png]]
+
+
+
+---
+
+
+## Virtualization:
+
+Before this there was a separate server for each application.
+
+Virtualization gives the idea of, what if multiple applications use the single physical server safely?
+
+A virtualization layer, Hypervisor which acts as a layer between the VMs to behave independently. It creates and manages the VMs.
+- Divides the physical computer computer into virtual ones
+-  Allocate resources efficiently
+- Manage security
+- Manage lifecycle of the machine.
+
+There are two  types of hypervisors:
+- Run directly on the hardware
+- Run on an operating system
+
+while testing malicious software in VM, be sure that both guest and host shouldn't be able to communicate. For this use different OS or cut the internet.
+
+#### VM:
+It is a virtual computer created by the hypervisor. It has its own virtual resources and work independently.
+
+#### Container:
+It is a lightweight isolated environment that runs the single application and all its necessary components.
+
+In other words it is  a package that bundles up code and all its dependencies so it can run reliably in any environment.
+Containers are platform dependent.
+
+We can manage the containers using an open source software that builds manage and deploy containers called docker.
+#### Kernel:
+It is the main part of the OS that communicate with the hardware and manages resources on the system.
+
+So now we use a single physical server, and virtual machines in it and then containers in those VMs.
+
+![[Pasted image 20260221082816.png]]
+
+
+
+---
+
+
