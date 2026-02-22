@@ -1225,3 +1225,48 @@ Also analyzed the monthly cost of credits based on usage and type of instance.
 ---
 
 
+## Operating Systems:
+
+OS is a core software that manages all processes on a system like interacting with hardware and managing resources.
+It sits between user, application and hardware.
+
+```
+User
+  |
+Application
+  |
+ OS
+  |
+Hardware
+```
+
+
+#### System privilege layer:
+Some components operate in a safer, restricted environment to avoid conflicts and security issues.
+
+**Types of Operation modes:**
+
+- **Kernel Mode:** The privileged, locked down core of the OS, where It has unrestricted access to all components or hardware of the system.
+- **User Mode:** All standard applications run in this mode. Whenever a privileged access is required a system call is made and requests kernel to behave on their behalf.
+
+#### OS duties/responsibilities:
+
+- Process management
+- Memory management
+- File System management
+- User management
+- Device management
+
+
+#### OS security:
+- Authentication
+- Permissions
+- Isolation
+- System protection
+
+
+#### OS interfaces:
+- GUI
+- CLI
+
+
