@@ -1257,16 +1257,46 @@ Some components operate in a safer, restricted environment to avoid conflicts an
 - User management
 - Device management
 
+> OS is the foundation of security, before any antivirus or firewall the OS is enforcing the basic security.
 
+so at basic level the OS is handling the following tasks.
 #### OS security:
 - Authentication
 - Permissions
 - Isolation
 - System protection
 
+#### Difference between GB and GiB:
+
+Here is the breakdown of the difference:
+
+- **GB (Gigabyte):** Uses the **decimal system** (base-10). It is exactly **1,000,000,000 bytes**. This is the standard used by hardware manufacturers for marketing hard drives and SSDs.
+- **GiB (Gibibyte):** Uses the **binary system** (base-2). It is exactly **1,073,741,824 bytes**. This is how most operating systems, like **Windows**, actually calculate storage—even if they label it "GB" on your screen. 
 
 #### OS interfaces:
-- GUI
-- CLI
+- **GUI (Graphical User Interface):** It is the graphical representation of all information you want to access on your computer.
+
+- **CLI (Command Line Interface):** In this interface we use the text base commands to retrieve or manipulate information. This is usually done on the terminal.
+
+
+#### The OS Landscape:
+
+Different devices and jobs demands different designs.
+
+**OS Types:**
+- Desktop
+- Server
+- Mobile
+- Embedded
+- Cloud
+
+There are several OS for these computer types.
+
+![[Pasted image 20260303233900.png]]
+
+
+
+---
+
 
 
