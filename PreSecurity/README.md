@@ -1300,3 +1300,13 @@ There are several OS for these computer types.
 
 
 
+## Windows Basics
+
+#### Types of Users
+- Guest
+- Standard
+- Administrator
+
+#### File System Management
+
+Windows uses hierarchical storage system means 
