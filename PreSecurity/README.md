@@ -1309,4 +1309,10 @@ There are several OS for these computer types.
 
 #### File System Management
 
-Windows uses hierarchical storage system means 
+Windows uses hierarchical storage system means it stores files and folders with in folders in a hierarchical manner.
+
+**Common locations:**
+- Desktop
+- Documents
+- Downloads
+
