@@ -1383,3 +1383,53 @@ It operates in different profiles
 
 
 
+#### Linux CLI Basics
+
+**Terminal:**
+A text based interface for controlling a linux system, we type in commands that tell the computer what exactly we want to do.
+
+In this room we are using some basic linux commands which are already used and noted above earlier.
+
+finding the username:
+
+```
+whoami
+```
+
+This will get your logged in username.
+
+
+To get details about OS use:
+
+```
+uname -a
+```
+
+
+Get file storage details in human readable format:
+
+```
+df -h
+```
+
+
+linux stores config files in /etc
+
+read the `os-release` file
+
+```
+cat /etc/os-release
+```
+
+
+> It contains the linux distribution details.
+
+
+**Room Completed:**
+![[Pasted image 20260310160616.png]]
+
+
+
+----
+
+
