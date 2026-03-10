@@ -1316,3 +1316,70 @@ Windows uses hierarchical storage system means it stores files and folders with 
 - Documents
 - Downloads
 
+---
+
+#### Configuring and securing windows:
+
+**Updating applications types:**
+1. Security patches
+2. performance updates
+3. bug fixes
+
+**Windows update:**
+A tool to update windows and some native applications in the PC. It may update the system automatically depending on your configs.
+
+**Updating apps:**
+1. Built in applications self update in the bg
+2. 3rd party apps include their own mechanisms
+3. some prompt to update upon launch
+4. some require to download a new installer version (like discord on ubuntu)
+
+**Installing applications:**
+1. From the MS Store
+2. From the internet (usually in the .exe or .msi format)
+
+**Uninstalling the Apps:**
+1. From MS
+2. from control panel
+3. from setting using remove programs
+4. using applications their own uninstallers.
+
+**System settings:**
+1. Windows settings
+2. Control Panel
+
+**Task Manager:**
+A builtin windows tool used to monitor system.
+Can be used to check:
+- Processes
+- Performance
+- Users
+- Details
+- Services
+
+**Native Windows Security:**
+Windows provide built in protection to protect the system from malware and viruses.
+
+**Windows Security**
+- Virus & threat protection
+- Firewall & network protection
+- App & browser control
+- Device security
+
+**Windows Defender Firewall:**
+Built in firewall of windows system to monitor network traffic of a system.
+It operates in different profiles
+- Domain
+- Private
+- Public
+
+**Room Completed:**
+
+![[Pasted image 20260310142638.png]]
+
+
+
+---
+
+
+
