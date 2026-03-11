@@ -1538,4 +1538,26 @@ look for `IPv4 Address` and `Default Gateway`.
 
 #### OS Security
 
+When we talk about security we meant for three things:
+1. Confidentiality
+2. Integrity
+3. Availability
+
+Hence the CIA Triad.
+
+
+In this room we focused on three attacks:
+
+1. **Authentication and weak passwords**
+		Authentication is the process of verifying your identity, we can identity it using three common ways:
+			i. Something you know
+			ii. Something you have
+			iii. Something you are
+			
+2. **Weak file permissions**
+	Just One word: Principle of least privilege
+		
+3. **Malicious programs**
+	Some malicious program like Trojan Horses can give hackers the access of your system which can affect the CIA triad of your system.
+
 
