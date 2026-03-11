@@ -1560,4 +1560,22 @@ In this room we focused on three attacks:
 3. **Malicious programs**
 	Some malicious program like Trojan Horses can give hackers the access of your system which can affect the CIA triad of your system.
 
+**Most privileged accounts:**
+1. On Windows:
+	1. `administrator`
+2. On Linux, android and Mac:
+	1. `root`
+
+> Performed a basic privilege escalation task (guided).
+
+
+**Room Completed:**
+
+![[Pasted image 20260311223531.png]]
+
+
+
+---
+
+
 
