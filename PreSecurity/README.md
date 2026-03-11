@@ -1579,3 +1579,36 @@ In this room we focused on three attacks:
 
 
 
+#### Data Representation
+
+The first eight colors: as **RGB**
+
+The system represents data as 1 or 0 aka binary.
+
+For example:
+The computer represents the color as **RGB - 111** means all colors are on (bits are on).
+
+#### Now moving from 8 to 16 Million
+Repeating the same math again, if each color on RGB consists of 256 levels. Then 256 x 256 x 256 = More than 16 Million. That covers most of our needs.
+
+One color can be represented by a single bit as on or off. But 256 colors need 8 bits, refered as a byte or octet.
+
+Colors are represented using 3 bytes or 3 x 8 bits or 10100011 11101010 00101010; for green color this is not a convenient way. Then comes in the Hexadecimal system.
+
+#### Numbers: Decimal to Hexadecimal
+
+Just revised:
+- Binary
+- Hexadecimal
+- Octal
+
+**Room Completed:**
+
+![[Pasted image 20260311230111.png]]
+
+
+
+---
+
+
+
