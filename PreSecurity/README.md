@@ -1433,3 +1433,106 @@ cat /etc/os-release
 ----
 
 
+#### Windows CLI Basics
+
+**Windows Command Line:**
+The **Command Prompt** is a text based interface to interact with the windows OS. We give commands to directly tell the system what to do. Also known as **Terminal**.
+
+Get the **current working directory** as in linux we use `pwd`
+
+```
+cd
+```
+
+Note that the `cd` command is also used to change between directories.
+
+To **get the contents of the current directory** like in linux we use `ls`
+
+```
+dir
+```
+
+**to view everything including hidden files, use:**
+
+```
+dir /a
+```
+
+**To move to a directory, use:**
+
+```
+cd folder_name
+```
+
+remember `.` represents current directory and `..` represents one back level directory.
+we can use the `cd ..` to move one directory back.
+
+
+**Searching for a file:**
+
+we can use the `dir /s` command to search for a file and return the path to it. The `/s` flag asks windows to search the file in all the subfolders of the current directory.
+
+**Reading the file:**
+Similarly as we use `cat` to read it on terminal we will use the command to read in windows terminal:
+
+```
+type filename
+```
+
+
+
+---
+
+
+#### Gathering system information on system:
+
+**Always ask**
+- Username
+- Machine name
+- Version details
+- Internet picture
+
+**Username of the System:**
+
+```
+#same as for linux
+
+whoami
+```
+
+**Machine name:**
+
+```
+hostname
+```
+
+
+**Get the version of windows:**
+
+```
+systeminfo
+```
+
+for a beginner just focus on `OS name` , `OS version`, `System Type`
+
+
+**Basic Network information:**
+
+Run:
+```
+ipconfig
+```
+
+look for `IPv4 Address` and `Default Gateway`.
+
+
+**Room Completed:**
+
+![[Pasted image 20260311214600.png]]
+
+
+
+---
+
+
+
