@@ -1632,3 +1632,31 @@ Most of the time we use **hexadecimal** digits to represent and understand bits.
 The 128 bit ASCII is not enough to support all the characters of these languages. The eighth bit of the ASCII represents these characters but is not sufficient for representing all the characters. 
 Then comes the ISO 8859-1 for Western European languages and ISO 8859-2 for Eastern-Central European languages characters.
 
+Now when different encoding standards came in but they were unable to represent all the characters from all languages.
+
+So there comes in the **UNICODE**!
+
+Unicode is a universal character encoding standard. It supports almost all characters, symbols, languages and even emojis. 
+The latest version is Unicode 17.0, which defines 157 thousand characters in which 4000 of them are emoji sequences.
+
+**UTF8:**
+use the 1 byte for ASCII, 2 bytes for non ASCII and 4 bytes for emojis.
+
+**UTF16:**
+Uses the 2 or 4 bytes for all characters.
+
+**UTF32**:
+It is the most wasteful encoding scheme, uses all bytes regardless of the character.
+
+
+**Room Completed:**
+
+![[Pasted image 20260313170327.png]]
+
+
+
+
+---
+
+
+
