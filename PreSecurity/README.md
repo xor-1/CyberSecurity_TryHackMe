@@ -1728,3 +1728,19 @@ while guess != secret:
 
 
 
+#### Javascript
+
+It is the programming language of the web. Firstly it was just for client side engines such as browsers but then Node was introduces which also used on the server side.
+
+In this room we will also make a game like the same we made in the previous python room.
+
+**Guess the number game**
+
+There are several ways to run your JS code but two of them are:
+- from your browser
+	- To run the js in browser, simply goto developer tools in console and write your code.
+	
+- from Node.js in your terminal
+	- Download the [Node](https://nodejs.org/en) from here.
+	- We can run the files as `node script.js`
+
