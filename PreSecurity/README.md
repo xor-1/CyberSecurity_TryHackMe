@@ -1659,5 +1659,5 @@ It is the most wasteful encoding scheme, uses all bytes regardless of the charac
 ---
 
 
-...
+
 
