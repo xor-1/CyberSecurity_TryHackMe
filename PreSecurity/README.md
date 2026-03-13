@@ -1612,3 +1612,23 @@ Just revised:
 
 
 
+#### Data Encoding
+
+Character are just numbers with agreed meaning. This agreement is called encoding.
+
+By taking this an example that how we will write TryHackMe in a file or what combination of numbers (1s and 0s) will represent this. For example: 01010100 will represent T but then it must be the standard across all manufacturers, programmers, etc. The oldest standard that was introduced is ASCII (1963). ASCII stands for American Standard Code for Information Interchange.
+
+It uses numbers 0 to 127 to represent letters, numbers and some special characters.
+The numbers of a specific sequence are in a sequence for e.g. for capital alphabets we go from 65 to 96 up to Z.
+
+At bit level if we write TryHackMe in a file then it will look like this:
+`01010100 01110010 01111001 01001000 01100001 01100011 01101011 01001101 01100101 00001010`
+
+Note that when we press `Enter` key, the `\n` new line character is inserted.
+
+Most of the time we use **hexadecimal** digits to represent and understand bits.
+
+##### European Languages:
+The 128 bit ASCII is not enough to support all the characters of these languages. The eighth bit of the ASCII represents these characters but is not sufficient for representing all the characters. 
+Then comes the ISO 8859-1 for Western European languages and ISO 8859-2 for Eastern-Central European languages characters.
+
