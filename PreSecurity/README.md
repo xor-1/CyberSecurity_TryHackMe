@@ -2027,7 +2027,7 @@ This is how HTTPS, VPNs, and encrypted messaging apps all operate.
 
 **Room Completed:**
 
-![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260314122011.png)
+![image|43](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260314133735.png)
 
 
 
