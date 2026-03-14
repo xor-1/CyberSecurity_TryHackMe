@@ -1944,3 +1944,94 @@ SELECT * FROM Orders WHERE drink = 'Coffee' ORDER BY price DESC;
 
 we protect secrets and protect tampering in real world using cryptography.
 
+**Key terms:**
+- Plaintext
+- Ciphertext
+- key
+- Algorithm
+
+**Encryption process:**
+
+```
+plaintext + encryption algorithm + key ==> ciphertext
+```
+
+and also
+
+**Decryption process:**
+
+```
+ciphertext + decryption algorithm + key ==> plaintext
+```
+
+> In cryptography the security comes from keeping the key private, not the algorithm.
+
+**Symmetric encryption:**
+Only one (the same)  key is used for both encryption and decryption.
+
+**Caeser Cipher**
+The algorithm named after Julius Caeser, used this method for messages transmissions in military about 2000 years ago.
+
+It shifts each alphabet in the message by a fixed number of positions in the alphabet. That fixed number is our **key**.
+
+Let's say the key is **3**:
+If Alice wants to encrypt `HELLO` with a key of **3**:
+So `HELLO` becomes `KHOOR`.
+To decrypt `KHOOR`, Bob shifts each letter **backwards** by 3:
+He gets `HELLO` again.
+
+- Symmetric encryption is fast and efficient.
+
+Key Distribution problem:
+We have to encrypt that key to transmit and also need a key for that key to transfer.  This is an infinite loop, known as Achilles' heel.
+
+> Special Takeaway: We use symmetric encryption in local systems and asymmetric encryption in remote systems.
+
+
+#### Asymmetric Encryption
+
+This encryption uses two mathematically linked keys:
+- Public key
+- Private key
+
+**THE MOST IMPORTANT NOTE**:
+- If I encrypt something with someone's public key, only their private key can decrypt it.
+- If I encrypt something with my private key, anyone with my public key can decrypt it. (USED IN DIGITAL SIGNATURES).
+
+**Solving the Key Distribution Problem**
+
+With asymmetric encryption, Alice and Bob don't need to share a secret key beforehand. A simple flow of events can be as follows:
+
+1. Bob creates a **public key** and a **private key** on his computer. He keeps the private key to himself and shares the public key with the world.
+2. Alice grabs Bob's public key (maybe from his website or a key server).
+3. Alice encrypts her message using Bob's public key and sends it off.
+4. Bob receives it and decrypts it using his private key.
+
+At no point did they need to exchange a key over the network secretly. The only key that travelled publicly was Bob's **public key**, which isn't secret by design. That's the solution to the key distribution problem.
+
+**Real world use:**
+- HTTPS
+
+To verify that the public key belongs to me, the Certificates comes in.
+it contains:
+- my public key
+- its belonging to .(e.g Google)
+- A CA (Certificate Authority) digitally signs it.
+
+In practice, **real systems use both**:
+
+- Asymmetric encryption initiates a connection and securely shares a symmetric key.
+- Symmetric encryption takes over for the remainder of the session to efficiently handle data.
+
+This is how HTTPS, VPNs, and encrypted messaging apps all operate.
+
+**Room Completed:**
+
+![[Pasted image 20260314133735.png]]
+
+
+
+---
+
+
+
