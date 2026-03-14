@@ -660,7 +660,7 @@ It would output the following to the client:
 
 #### Room completed:
 
-![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260213233523.png)
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260213233523.png)
 
 
 ---
@@ -937,7 +937,7 @@ This is where the important files used by the system are stores such as **passwd
 
 #### Room completed:
 
-![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260215021238.png)
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260215021238.png)
 
 
 ---
@@ -1037,7 +1037,7 @@ We will explore all components of a computer system to understand how they work 
 - Select boot drive
 - Start boot loader
 
-![[Pasted image 20260220211829.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260220211829.png)
 
 
 ---
@@ -1064,7 +1064,7 @@ A. Because every design is a trade-off.
 There is not best computer. Its just the right tool for the job.
 
 
-![[Pasted image 20260220232651.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260220232651.png)
 
 
 ---
@@ -1101,14 +1101,14 @@ Modern web apps use mechanisms to overcome this problem by using different metho
 - CONNECT
 - TRACE
 
-![[Pasted image 20260221070318.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260221070318.png)
 
 
 **The Response is divided into two categories:**
 - Response header
 - Response body
 
-![[Pasted image 20260221070827.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260221070827.png)
 
 
 
@@ -1148,7 +1148,7 @@ It is the main part of the OS that communicate with the hardware and manages res
 
 So now we use a single physical server, and virtual machines in it and then containers in those VMs.
 
-![[Pasted image 20260221082816.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260221082816.png)
 
 
 
@@ -1219,7 +1219,7 @@ Also analyzed the monthly cost of credits based on usage and type of instance.
 
 #### Room completed:
 
-![[Pasted image 20260221140943.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260221140943.png)
 
 
 ---
@@ -1292,7 +1292,7 @@ Different devices and jobs demands different designs.
 
 There are several OS for these computer types.
 
-![[Pasted image 20260303233900.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260303233900.png)
 
 
 
@@ -1375,7 +1375,7 @@ It operates in different profiles
 
 **Room Completed:**
 
-![[Pasted image 20260310142638.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260310142638.png)
 
 
 
@@ -1426,7 +1426,7 @@ cat /etc/os-release
 
 
 **Room Completed:**
-![[Pasted image 20260310160616.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260310160616.png)
 
 
 
@@ -1528,7 +1528,7 @@ look for `IPv4 Address` and `Default Gateway`.
 
 **Room Completed:**
 
-![[Pasted image 20260311214600.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260311214600.png)
 
 
 
@@ -1571,7 +1571,7 @@ In this room we focused on three attacks:
 
 **Room Completed:**
 
-![[Pasted image 20260311223531.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260311223531.png)
 
 
 
@@ -1604,7 +1604,7 @@ Just revised:
 
 **Room Completed:**
 
-![[Pasted image 20260311230111.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260311230111.png)
 
 
 
@@ -1651,7 +1651,7 @@ It is the most wasteful encoding scheme, uses all bytes regardless of the charac
 
 **Room Completed:**
 
-![[Pasted image 20260313170327.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260313170327.png)
 
 
 
@@ -1676,7 +1676,7 @@ In this room, I covered three key pillars in imperative programming languages:
 
 **Source code:**
 
-```
+```python
 import random  # gives us tools for picking random numbers
 
 # ----------------------------
@@ -1720,7 +1720,7 @@ while guess != secret:
 
 **Room completed:**
 
-![[Pasted image 20260313232843.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260313232843.png)
 
 
 
@@ -1852,7 +1852,7 @@ In this room, we covered three key pillars in imperative programming languages:
 
 **Room Completed:**
 
-![[Pasted image 20260314112258.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260314112258.png)
 
 
 
@@ -1911,7 +1911,7 @@ SELECT * FROM Orders WHERE drink = 'Coffee' ORDER BY price DESC;
 
 **Room Completed:**
 
-![[Pasted image 20260314115029.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260314115029.png)
 
 
 
@@ -1932,7 +1932,7 @@ SELECT * FROM Orders WHERE drink = 'Coffee' ORDER BY price DESC;
 
 **Room Completed:**
 
-![[Pasted image 20260314122011.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260314122011.png)
 
 
 
@@ -2027,7 +2027,7 @@ This is how HTTPS, VPNs, and encrypted messaging apps all operate.
 
 **Room Completed:**
 
-![[Pasted image 20260314133735.png]]
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260314122011.png)
 
 
 
