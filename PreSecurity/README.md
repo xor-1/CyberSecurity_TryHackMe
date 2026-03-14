@@ -1744,3 +1744,199 @@ There are several ways to run your JS code but two of them are:
 	- Download the [Node](https://nodejs.org/en) from here.
 	- We can run the files as `node script.js`
 
+**Creating variables**
+- let
+- const
+
+Example for understanding const:
+
+```javascript
+const secret = Math.floor(Math.random() * (20)) + 1;
+```
+
+- `Math.random()` gives a random decimal between 0 (inclusive) and 1 (not including 1). Example: `0.372`.
+- `* 20` stretches that range from 0 to (almost) 20. Example: `7.44`.
+- `Math.floor()` removes the decimal by rounding down. Example: `7.44` becomes `7`.
+- `+ 1` shifts the range from `0–19` to `1–20`.
+
+
+**Displaying output:**
+
+```javascript
+console.log("XOR-1 IS THE BEST!");
+```
+
+**Asking the question ( a number):**
+
+```javascript
+import * as readline from "node:readline/promises";
+import { stdin as input, stdout as output } from "node:process";
+
+const rl = readline.createInterface({ input, output });
+```
+
+Including error handling:
+
+```javascript
+const rl = readline.createInterface({ input, output });
+
+try {
+//...
+    const text = await rl.question("Take a guess: "); // rl.question() returns text (a string)
+//...
+} finally {
+    rl.close();
+}
+```
+
+Remember that the not equal to in javascript is written as `!==`
+
+The full final version of the game:
+
+```javascript
+import * as readline from "node:readline/promises";
+import { stdin as input, stdout as output } from "node:process";
+
+// ----------------------------
+// Guess the Number (Beginner Demo)
+// ----------------------------
+// The computer picks a secret number.
+// The player keeps guessing until they find it.
+
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 20;
+
+const rl = readline.createInterface({ input, output });
+
+try {
+  const secret =
+    Math.floor(Math.random() * (MAX_NUMBER - MIN_NUMBER + 1)) + MIN_NUMBER; // MIN_NUMBER <= secret <= MAX_NUMBER
+  let tries = 0;
+  let guess = 0; // start with a value that cannot be the secret (since secret is 1..20)
+
+  console.log("I'm thinking of a number between", MIN_NUMBER, "and", MAX_NUMBER);
+
+  // Repeat until the user guesses the secret number.
+  while (guess !== secret) {
+    const text = await rl.question("Take a guess: "); // rl.question() returns text (a string)
+
+    // If the user didn't type digits, we avoid crashing and ask again.
+    if (!/^\d+$/.test(text)) { // True only if all characters are digits
+      console.log("Please type a whole number (like 7).");
+    } else {
+      guess = parseInt(text, 10); // convert the text to a number
+      tries = tries + 1; // add 1 try
+
+      // Give a hint using if / else if / else.
+      if (guess < MIN_NUMBER || guess > MAX_NUMBER) {
+        console.log("That number is out of range. Try again.");
+      } else if (guess < secret) {
+        console.log("Too low, try again.");
+      } else if (guess > secret) {
+        console.log("Too high, try again.");
+      } else {
+        console.log("You got it in", tries, "tries!");
+      }
+    }
+  }
+} finally {
+  rl.close();
+}
+```
+
+In this room, we covered three key pillars in imperative programming languages:
+
+- Variables
+- Conditionals with `if` and `else`
+- Loops with `while`
+
+**Room Completed:**
+
+![[Pasted image 20260314112258.png]]
+
+
+
+---
+
+
+
+#### SQL:
+
+Structured query language (SQL) is a programming language for storing and processing information in a relational database. A relational database stores information in tabular form, with rows and columns representing different data attributes and the various relationships between the data values. You can use SQL statements to store, update, remove, search, and retrieve information from the database. You can also use SQL to maintain and optimize database performance.
+
+Database is a place where computers store information in an organized form.
+
+##### Key Terminologies:
+
+**Table:**
+Where information is organized into rows and columns.
+
+**Columns:**
+The titles on the top of the table. Also known as field.
+
+**Rows:**
+Rows go across the table. Also known as records.
+
+> For questioning the databases, we use a language called SQL (Structured Query Language).
+
+Standard Query for getting data:
+
+```SQL
+SELECT * FROM <TableName>
+```
+
+**Filter Rows:**
+We use the `WHERE` keyword to filter rows;
+for example:
+
+```SQL
+SELECT * FROM Orders WHERE drink = 'Coffee';
+```
+
+**Sorting results:**
+`ORDER BY` keyword sorts the rows by column.
+
+```SQL
+SELECT * FROM Orders ORDER BY price;
+SELECT * FROM Orders ORDER BY price DESC;
+```
+
+**Combining Filtering and sorting:**
+
+```SQL
+SELECT * FROM Orders WHERE drink = 'Coffee' ORDER BY price DESC;
+```
+
+> By default it is sorted in ascending order.
+
+**Room Completed:**
+
+![[Pasted image 20260314115029.png]]
+
+
+
+---
+
+
+
+#### The CIA Triad
+
+**The key aspects of security:**
+- Confidentiality
+- Integrity
+- Availability
+
+> We attack or defend to ensure that these pillars remains intact.
+
+**CIA Triad** is not just a set of definitions, its a security mindset of cyber security professionals.
+
+**Room Completed:**
+
+![[Pasted image 20260314122011.png]]
+
+
+
+---
+
+
+
