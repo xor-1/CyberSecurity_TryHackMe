@@ -1940,3 +1940,7 @@ SELECT * FROM Orders WHERE drink = 'Coffee' ORDER BY price DESC;
 
 
 
+#### Cryptography basics:
+
+we protect secrets and protect tampering in real world using cryptography.
+
