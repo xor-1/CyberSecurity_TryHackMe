@@ -87,3 +87,98 @@ Social media platforms are great source to grow socially as it will help you to 
 
 
 
+## Linux Fundamentals Part 3
+
+As I have recently did the Linux Fundamentals part 1 and 2 in the PreSecurity Learning path so skipping it for now. The notes are in the PreSecurity Learning Path.
+
+The Linux Fundamentals Part 3 is also documented up to the section **General/Useful Utilities**.
+
+
+#### Processes 101
+
+**Processes:** Processes are the programs that are running on our machine, they are managed by the kernel assigned a PID which increments in the order they are started.
+For example:
+29th process has PID of 29.
+
+check processes of user's session:
+
+```bash
+ps
+```
+
+processes from other users and those that donot run from user's session:
+
+```bash
+ps aux
+```
+
+the dynamic view of processes in the terminal as it refreshes the terminal every time you press an arrow key to navigate or every 10 seconds:
+
+```bash
+top
+```
+
+#### Managing processes:
+
+We can use signals to terminate processes.
+To stop a process or kill a command, we use the `kill` command.
+
+```bash
+kill PID
+```
+
+Some other signals:
+
+```bash
+SIGTERM
+
+SIGKILL
+
+SIGSTOP
+```
+
+
+#### How processes are started
+
+OS uses namespaces, processes have a small amount of resources in these namespaces and processes in the same namespaces can see each other.
+
+The processes start from PID 0 and so on. The first process on Ubuntu is `systemd` which is a process manager sits between OS and user.
+
+For example:
+When a system starts, the first process is the `systemd` with a `PID 0` and all other processes start as child of `systemd`. It will be controlled by `systemd` but will run as its own process.
+
+#### Getting services to start on boot:
+
+Some applications can be started on boot that we own.
+We can use the `systemctl` command for that. Using this command we can interact with the `systemd` (which is the process manager sitting between user and OS).
+
+The command formatting is as:
+
+```bash
+systemctl [option] [service]
+```
+
+For example:
+
+```bash
+systemctl start apache2
+```
+
+We have 5 `options` for `systemctl`
+
+```bash
+start
+stop
+enable
+disable
+status
+```
+
+#### Backgrounding and foregrounding
+
+Processes can run in two states
+- **Background:** After adding the `&` the command runs in the background. We are just given the PID of the process. Its great for copying large files, while we can do other tasks simultaneously.
+- **Foreground:** That return the output to your terminal. For example the `echo` command directly returns the output to our terminal is a good example of foreground processing.
+
+If a process is running in the foreground and we want to background it (suspend or stop it). We can use the `ctrl + z` command. To again retrieve it in the foreground we can use the `fg` command and it will start executing again.
+
