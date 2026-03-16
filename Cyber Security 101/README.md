@@ -182,3 +182,25 @@ Processes can run in two states
 
 If a process is running in the foreground and we want to background it (suspend or stop it). We can use the `ctrl + z` command. To again retrieve it in the foreground we can use the `fg` command and it will start executing again.
 
+#### Maintaining your system: CRONTABS
+
+We sometimes want to schedule the jobs or do automation. `Cron` comes in. We create `crontabs` for this. `Crontabs` is a process that starts during boot and take care of the `cron jobs`. 
+A `crontab` is a special file that is recognized by `cron` process to execute each line step by step.
+
+Crontab requires 6 specific values:
+
+| Value | Description                               |
+| ----- | ----------------------------------------- |
+| MIN   | What minute to execute at                 |
+| HOUR  | What hour to execute at                   |
+| DOM   | What day of the month to execute at       |
+| MON   | What month of the year to execute at      |
+| DOW   | What day of the week to execute at        |
+| CMD   | The actual command that will be executed. |
+
+example for backing up files of a user at every midnight:
+
+```bash
+0 */12 * * * cp -R /home/cmnatic/Documents /var/backups/
+```
+
