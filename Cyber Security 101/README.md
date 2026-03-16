@@ -204,3 +204,79 @@ example for backing up files of a user at every midnight:
 0 */12 * * * cp -R /home/cmnatic/Documents /var/backups/
 ```
 
+Crontabs also support wildcards `*` as don't cares.
+
+For crontab generation:
+
+- https://crontab-generator.org/
+- https://crontab.guru/
+
+In system the crontab can be edited using:
+
+```bash
+crontab -e
+```
+
+#### Maintaining your system: Package Management
+
+**Introducing packages and software repos:**
+If a developer wants to publish their tool or software, they submit it to a `apt` repository, once approved the tool is launched into the wild.
+
+we can check the list of `apt` repositories in (these files are registry/gateways):
+
+```bash
+/etc/apt/
+```
+
+OS vendors like ubuntu maintain their own reporsitories but we can add community repos also.
+It can be added using the command:
+
+```bash
+apt-add-repository
+```
+
+Apt is a package management tool used to install manage and remove packages.
+we can also use the `dpkg` command for package management but using `apt` all software are checked for updates.
+
+When adding the software repo, the integrity is checked using the `GPG(Gnu Privacy Gaurd) keys` the keys are downloaded and checked if the developer also used the same keys if the keys are different the software will not be downloaded.
+
+For example:
+1. adding the keys for sublime text editor:
+```bash
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+```
+
+2. Now add its repo to apt source list. Good to have a separate file for 3rd party or community repos.
+3. create a file named **sublime-text.list** in **/etc/apt/sources.list.d**
+4. add this using nano:
+```bash
+deb https://download.sublimetext.com /apt/stable/
+```
+5. Now use `apt update` command to update `apt`.
+6. Once updated we can download the sublime text editor using:
+```bash
+apt install sublime-text
+```
+7. Removing packages is as easy as reversing. This process is done by using the `add-apt-repository --remove ppa:PPA_Name/ppa` command or by manually deleting the file that we previously added to. Once removed, we can just use `apt remove [software-name-here]` i.e. `apt remove sublime-text`
+
+
+#### Logs:
+
+The `/var/log/` directory contains the logs in linux.
+OS does log rotating:
+
+Additional info:
+Rotating in Linux, specifically **log rotation** via the `logrotate` utility, is ==the automatic process of archiving, compressing, and deleting old system or application logs to prevent them from consuming excessive disk space and slowing down the system==. It keeps logs manageable by creating new log files and cleaning up old ones.
+
+The new log files are created by name.1 and so on.
+
+**Room completed**
+
+![[Pasted image 20260317013218.png]]
+
+
+
+----
+
+
+
