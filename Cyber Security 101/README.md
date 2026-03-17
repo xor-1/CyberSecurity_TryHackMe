@@ -282,3 +282,26 @@ The new log files are created by name.1 and so on.
 
 ## Windows Fundamentals 1
 
+**File Systems:** It decides that how files and folders are stored in a disk.
+
+Common FIle Systems:
+- NTFS (Journaling File System)
+- FAT16/32
+- HPFS
+
+**NTFS volume permissions**
+- Full control
+- modify
+- read and execute
+- list folder contents
+- read
+- write
+
+**ADS (Alternate Data Stream**
+NTFS allows files to contain other data streams as well. Powershell allows us to view ADS for files.
+
+Learn more about ADS: https://www.malwarebytes.com/blog/101/2015/07/introduction-to-alternate-data-streams
+
+#### Environment variables:
+_Environment variables store information about the operating system environment. This information includes details such as the operating system path, the number of processors used by the operating system, and the location of temporary folders_
+
