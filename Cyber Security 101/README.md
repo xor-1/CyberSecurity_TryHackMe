@@ -305,3 +305,14 @@ Learn more about ADS: https://www.malwarebytes.com/blog/101/2015/07/introduction
 #### Environment variables:
 _Environment variables store information about the operating system environment. This information includes details such as the operating system path, the number of processors used by the operating system, and the location of temporary folders_
 
+#### User Accounts, Profiles, and Permissions
+
+**Two types of accounts:**
+- Administrator
+- User
+
+we can view the user management and group policy view using:
+
+`win + r`
+`lusrmgr.msc`
+
