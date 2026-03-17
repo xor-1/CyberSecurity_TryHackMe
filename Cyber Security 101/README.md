@@ -247,7 +247,7 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add
 ```
 
 2. Now add its repo to apt source list. Good to have a separate file for 3rd party or community repos.
-3. create a file named **sublime-text.list** in **/etc/apt/sources.list.d**
+3. create a file named **sublime-text.list** in **/etc/apt/sources.list.d/**
 4. add this using nano:
 ```bash
 deb https://download.sublimetext.com /apt/stable/
@@ -279,4 +279,6 @@ The new log files are created by name.1 and so on.
 ----
 
 
+
+## Windows Fundamentals 1
 
