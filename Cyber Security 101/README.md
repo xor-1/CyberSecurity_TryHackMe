@@ -305,6 +305,8 @@ Learn more about ADS: https://www.malwarebytes.com/blog/101/2015/07/introduction
 #### Environment variables:
 _Environment variables store information about the operating system environment. This information includes details such as the operating system path, the number of processors used by the operating system, and the location of temporary folders_
 
+The environment variable for the Windows directory is `%windir%`
+
 #### User Accounts, Profiles, and Permissions
 
 **Two types of accounts:**
@@ -315,4 +317,78 @@ we can view the user management and group policy view using:
 
 `win + r`
 `lusrmgr.msc`
+
+#### UAC
+
+Windows use UAC to protect local user from admin privileges. user accounts operate in non privileged mode.
+
+**Working:**
+when a user with administrator account logs in, the session is not running in privileged mode.
+When OS requires privileged access, UAC prompts to ask if allow or deny permission. This way programs are controlled.
+
+|Feature|UAC (Windows)|sudo (Linux/macOS)|
+|---|---|---|
+|Interface|GUI prompt|Command-line|
+|Control model|System-wide policy|User/group-based rules|
+|Default behavior|Admins run as limited users|Users are non-root by default|
+|Flexibility|Less granular|Highly configurable|
+|Usage style|Automatic prompts|Explicit command (`sudo`)|
+
+learn more about UAC at: https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/how-it-works
+
+## Settings and the control panel
+
+Windows allows users to change settings through control panel later from windows 8 the settings app was introduced.
+
+## Task Manager
+
+It provides insights into current processes and applications running along with resource usage on the system.
+
+
+**Room completed:**
+
+![[Pasted image 20260318202344.png]]
+
+
+For now:
+
+![[Pasted image 20260318202415.png]]
+
+
+
+---
+
+
+
+## System Configuration and Advanced System Settings
+
+System configuration or `MSConfig` utility is used to advanced troubleshooting.
+
+**It has 5 tabs:**
+- General
+- Boot
+- Services
+- Startups
+- Tools
+
+In windows server the `starup` are not shown in the `MSConfig` utility or `Task Manager`. It can be listed by going to the `Startup` folder or by pressing `Win + R` and entering `shell:startup` and press `Enter`.
+
+In the `tools` tab, consists tools that we can further use to configure our OS.
+
+#### Advanced system settings
+
+It allows us to do additional configurations. can be used by typing `view advanced system settings` in the `Start Menu` and it contains many features but two are main:
+
+- **File Paging:** Windows uses some of the memory as virtual memory. When the RAM runs out it uses that memory to prevent program crashes.
+- **Startup and Recovery:** When system crashes or Screen of Death happens, the system automatically dumps file containing the root cause and actions took place during crash. That file is contained at environment variable; `%SystemRoot%/` where as the `SystemRoot` is `C:/Windows`.
+
+
+#### Change UAC Settings:
+you can change the UAC settings in the using the `MSConfig` utility or `User Account Control settings` 
+
+**It has four level:**
+- Always Notify
+- Notify for apps
+- Notify without dimming
+- Never notify
 
