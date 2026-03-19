@@ -473,3 +473,13 @@ command to open: `regedt32.exe`
 
 The main player for all these type of tools is `MSConfig`
 
+**Room completed:**
+
+![[Pasted image 20260319232553.png]]
+
+
+
+---
+
+
+
