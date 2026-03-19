@@ -326,21 +326,21 @@ Windows use UAC to protect local user from admin privileges. user accounts opera
 when a user with administrator account logs in, the session is not running in privileged mode.
 When OS requires privileged access, UAC prompts to ask if allow or deny permission. This way programs are controlled.
 
-|Feature|UAC (Windows)|sudo (Linux/macOS)|
-|---|---|---|
-|Interface|GUI prompt|Command-line|
-|Control model|System-wide policy|User/group-based rules|
-|Default behavior|Admins run as limited users|Users are non-root by default|
-|Flexibility|Less granular|Highly configurable|
-|Usage style|Automatic prompts|Explicit command (`sudo`)|
+| Feature          | UAC (Windows)               | sudo (Linux/macOS)            |
+| ---------------- | --------------------------- | ----------------------------- |
+| Interface        | GUI prompt                  | Command-line                  |
+| Control model    | System-wide policy          | User/group-based rules        |
+| Default behavior | Admins run as limited users | Users are non-root by default |
+| Flexibility      | Less granular               | Highly configurable           |
+| Usage style      | Automatic prompts           | Explicit command (`sudo`)     |
 
 learn more about UAC at: https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/how-it-works
 
-## Settings and the control panel
+#### Settings and the control panel
 
 Windows allows users to change settings through control panel later from windows 8 the settings app was introduced.
 
-## Task Manager
+#### Task Manager
 
 It provides insights into current processes and applications running along with resource usage on the system.
 
@@ -360,7 +360,8 @@ For now:
 
 
 
-## System Configuration and Advanced System Settings
+## Windows Fundamentals 2
+#### System Configuration and Advanced System Settings
 
 System configuration or `MSConfig` utility is used to advanced troubleshooting.
 
@@ -392,7 +393,7 @@ you can change the UAC settings in the using the `MSConfig` utility or `User Acc
 - Notify without dimming
 - Never notify
 
-## Computer management
+#### Computer management
 
 The computer management or `compmgmt` has three primary sections:
 - System tools:
@@ -412,7 +413,7 @@ The computer management or `compmgmt` has three primary sections:
 > A service is a special type of application that runs in the background.
 
 
-## System information
+#### System information
 
 We can access the tool `Msinfo32` from the `MSConfig` utility.
 This tool gives detailed info about the system.
@@ -425,13 +426,13 @@ This includes the following:
 > We can get all the `Environment Variables` in `Software Enviroment` Section.
 
 
-## Resource Monitor
+#### Resource Monitor
 
 `remon`
 
 _Resource Monitor displays per-process and aggregate CPU, memory, disk, and network usage information, in addition to providing details about which processes are using individual file handles and modules._
 
-## Command prompt:
+#### Command prompt:
 
 we can use the command prompt to interact with the computer.
 also known as `cmd`
@@ -451,7 +452,7 @@ ipconfig /all
 A  command to retrieve the help manual for a command is `/?`. e.g `ipconfig /?`
 
 
-## Registry
+#### Registry
 
 It is a hierarchical database used to store information necessary to configure system.
 
@@ -481,5 +482,75 @@ The main player for all these type of tools is `MSConfig`
 
 ---
 
+
+
+## Windows Fundamentals 3
+
+This module will cover the security features of windows operating system.
+
+#### Windows Update
+
+Windows updates are provided my Microsoft to provide updates, features and patches.
+
+- **Patch Tuesday: THE TUESDAY ON WHICH THE MICROSOFT PUSHES UPDATES TO WINDOWS DEVICES, BUT IT IS NOT NECESSARY IF UPDATES ARE URGENT THEN IT IS PUSHED AT THAT TIME.**
+
+The `Windows Updates` can be accessed from the `Settings` app or by typing the command in the `cmd`:
+
+```cmd
+control /name Microsoft.WindowsUpdate
+```
+
+From onwards Windows 10 the updates cannot be ignored and they can just be postponed and installed to keep the systems safe.
+
+
+#### Windows Security
+
+Per Microsoft, "_**Windows Security** is your home to manage the tools that protect your device and your data_".
+
+Windows security contains the four major `Protection Areas`:
+- Virus and Threat Protection
+- Firewall and Network Protection
+- App and browser control
+- Device Security
+
+so in further tasks we will go deep into each of this `Protection Area`
+
+#### Virus and Threat Protection:
+It is divided into two parts;
+- **Current threats:**
+	- We have **scan options** and **threat history**.
+
+- **Virus and threat protection settings:**
+	- **Real-time protection**
+	- **Cloud-delivered protection** 
+	- **Automatic sample submission** 
+	- **Controlled folder access** 
+	- **Exclusions**
+	- **Notifications** 
+- **Virus and threat protection updates**
+	- Check for updates
+- **Ransomware protection**
+	- **Controlled folder access**
+
+
+#### Firewall and network protection
+
+A software that checks for the incoming and outgoing network traffic to a system.
+We have 3 network profiles:
+- Domain (works in AD and Domain controllers)
+- Private (In our home and personal networks)
+- Public (In public networks like Wifi and coffee shops)
+
+In each profile we have 2 options:
+- Turn it on/off
+- Block all incoming connections
+
+**Allow and APP through firewall:**
+We can allow/disallow an app to pass through firewall. It basically have 2 options. i.e Public and Domain.
+
+i also did an adventure using it in THM VM. In `Allow an app through firewall` i disallowed the `public` and `private` connections through firewall, the VM stucks and never responded again so I terminated it and re-deployed it again 😂😂😂.
+
+we can also configure `Windows Defender Firewall` to create and import rules.
+Command to open it: `WF.msc`
 
 
