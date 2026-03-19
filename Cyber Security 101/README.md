@@ -392,3 +392,76 @@ you can change the UAC settings in the using the `MSConfig` utility or `User Acc
 - Notify without dimming
 - Never notify
 
+## Computer management
+
+The computer management or `compmgmt` has three primary sections:
+- System tools:
+	- Task Scheduler
+	- Event viewer
+	- Shared folders
+	- Performance
+	- Device manager
+
+- Storage:
+	- Windows server backup
+	- disk management
+
+- Services and applications:
+	- Services (see properties for more info.)
+
+> A service is a special type of application that runs in the background.
+
+
+## System information
+
+We can access the tool `Msinfo32` from the `MSConfig` utility.
+This tool gives detailed info about the system.
+
+This includes the following:
+- Hardware resources
+- components
+- Software environment
+
+> We can get all the `Environment Variables` in `Software Enviroment` Section.
+
+
+## Resource Monitor
+
+`remon`
+
+_Resource Monitor displays per-process and aggregate CPU, memory, disk, and network usage information, in addition to providing details about which processes are using individual file handles and modules._
+
+## Command prompt:
+
+we can use the command prompt to interact with the computer.
+also known as `cmd`
+
+some commands to try:
+
+```cmd
+hostname
+whoami
+ipconfig
+cls
+netstat
+net [option]
+ipconfig /all
+```
+
+A  command to retrieve the help manual for a command is `/?`. e.g `ipconfig /?`
+
+
+## Registry
+
+It is a hierarchical database used to store information necessary to configure system.
+
+it includes:
+- Profiles for each user
+- Applications installed on the computer and the types of documents that each can create
+- Property sheet settings for folders and application icons
+- What hardware exists on the system
+- The ports that are being used.
+- and other advanced security settings.
+
+**WARNING: DO NOT MAKE CHANGES TO REGISTRY IF YOU DO NOT KNOW!**
+
