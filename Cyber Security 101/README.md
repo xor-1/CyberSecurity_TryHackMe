@@ -469,4 +469,7 @@ We can edit the registry using `regedit`.
 
 learn more about registry: https://docs.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users
 
+command to open: `regedt32.exe`
+
+The main player for all these type of tools is `MSConfig`
 
