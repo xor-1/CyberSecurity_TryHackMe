@@ -465,3 +465,8 @@ it includes:
 
 **WARNING: DO NOT MAKE CHANGES TO REGISTRY IF YOU DO NOT KNOW!**
 
+We can edit the registry using `regedit`.
+
+learn more about registry: https://docs.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users
+
+
