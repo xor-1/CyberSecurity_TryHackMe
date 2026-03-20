@@ -554,3 +554,6 @@ we can also configure `Windows Defender Firewall` to create and import rules.
 Command to open it: `WF.msc`
 
 
+#### App and browser control
+
+Windows Smart Screen protects against downloading of malware and phishing.
