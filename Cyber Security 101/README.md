@@ -557,3 +557,129 @@ Command to open it: `WF.msc`
 #### App and browser control
 
 Windows Smart Screen protects against downloading of malware and phishing.
+ It checks for files and applications from the browser.
+ We can set the `App and Browser Control` to following states:
+ - Block
+ - Warn
+ - Off
+
+We also have `Exploit Protection`
+In this section we have advanced configs like `DEP`.
+
+
+#### Device Security
+
+In device security we have, `Core Isolation` that keep `memory integrity` to prevent any malicious code to be injected into high-security processes.
+
+It also contains `Security Processor` aka `TPM (Trusted Platform Module)`
+
+Per Microsoft, "_Trusted Platform Module (TPM) technology is designed to provide hardware-based, security-related functions. A TPM chip is a secure crypto-processor that is designed to carry out cryptographic operations. The chip includes multiple physical security mechanisms to make it tamper-resistant, and malicious software is unable to tamper with the security functions of the TPM"._
+
+
+#### Bitlocker
+
+It is a disk encryption feature help to protect data in case of device stolen.
+BitLocker provides best protection with TPM 1.2 or later.
+
+When `TPM` is not installed on a device, saving up the `startup key` on a removable device is mandatory before enabling `BitLocker`.
+
+
+#### Volume Shadow Copy Service
+
+This service helps in actions creating and managing shadow copy of the data to be backup. The shadow copy is also known as:
+- Snapshot
+- Point-in-time copy
+
+If VSS is enabled we can perform the following actions on the disk if protection is enabled on that disk:
+- Create a restore point
+- Perform system restore
+- Configure restore settings
+- Delete restore points
+
+Malware writers also target these backups to disable you to revert to last backup unless you have offline or offsite backup.
+
+**“Living off the land” (often shortened to LOTL)** has two main meanings depending on context:
+
+#### 1. General meaning (everyday use)
+
+It means **surviving using natural resources from the environment** instead of relying on modern systems.
+
+Examples:
+
+- Hunting, fishing, or farming your own food
+- Using wood for shelter or fire
+- Collecting water from natural sources
+
+It’s commonly associated with **self-sufficiency, survival skills, or off-grid living**.
+
+#### 2. Cybersecurity meaning (very important)
+
+In cybersecurity, **“living off the land” refers to attackers using tools that already exist on a system instead of installing malware.**
+
+These are called:
+
+- **LOLBins (Living-Off-the-Land Binaries)**
+
+Examples in **Microsoft Windows**:
+
+- `PowerShell`
+- `cmd.exe`
+- `wmic`
+- `schtasks`
+- `net.exe`
+#### Why attackers use LOTL
+
+- Harder to detect (no new malware files)
+- Blends in with normal system activity
+- Bypasses traditional antivirus tools
+#### Simple example
+
+Instead of installing hacking software, an attacker might:
+
+- Use `PowerShell` to download data
+- Use `schtasks` to schedule persistence
+- Use built-in tools to move laterally across systems
+
+Everything looks like normal admin activity.
+
+
+#### Credential Gaurd
+
+**Credential Guard** is a security feature in **Microsoft Windows** designed to **protect user credentials from theft**, especially against advanced attacks like credential dumping.
+
+**What Credential Guard does**
+
+Credential Guard uses virtualization-based security to isolate sensitive data such as:
+
+- NTLM password hashes
+- Kerberos tickets
+- Stored credentials
+
+These secrets are stored in a protected environment that normal processes (even with admin rights) **cannot access directly**.
+
+
+#### Windows hello
+
+Windows Hello is a built-in authentication system in Microsoft Windows that lets you sign in without a traditional password, using biometrics or a PIN.
+
+What Windows Hello is:
+It’s a secure, passwordless sign-in method that uses:
+- Facial recognition
+- Fingerprint scanning
+- PIN code
+
+
+#### CSO Online
+The new features of Windows OS blog post, give it a read: https://www.csoonline.com/article/564531/the-best-new-windows-10-security-features.html
+
+
+**Room Completed:**
+
+![[Pasted image 20260320170411.png]]
+
+
+
+---
+
+
+
