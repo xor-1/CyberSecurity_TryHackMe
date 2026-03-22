@@ -684,3 +684,13 @@ The new features of Windows OS blog post, give it a read: https://www.csoonline.
 
 
 ## Active Directory Basics
+
+#### Domain
+The **Windows Domain** is a group of users and computers under the administration of a given business.
+
+#### Active Directory
+In windows domain environment, all components of a windows computer network are stored in a single repository called Active Directory.
+
+#### Domain Controller
+The server that runs the Active Directory services is known as Domain Controller.
+
