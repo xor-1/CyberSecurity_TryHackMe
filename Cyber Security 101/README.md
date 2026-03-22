@@ -686,4 +686,3 @@ The new features of Windows OS blog post, give it a read: https://www.csoonline.
 ## Active Directory Basics
 
 Active Directory
-Domain Controller
