@@ -699,4 +699,4 @@ This service acts as a catalogue that contains all information about the **objec
 The objects include:
 - **Users (Security Principals)**: It includes People and Services
 - 
-, groups, machines, printers, shares and many others.
+, groups, machines, printers, shares and ma
