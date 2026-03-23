@@ -697,4 +697,4 @@ The server that runs the Active Directory services is known as Domain Controller
 #### Active Directory Domain Service (AD DS)
 This service acts as a catalogue that contains all information about the **objects**. The objects are the components in the AD DS.
 The objects include:
-- **Users (Security Principals)**: It includes People and Services
+- **Users (Security Principals)**: It
