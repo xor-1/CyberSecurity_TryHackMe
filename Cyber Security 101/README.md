@@ -697,6 +697,8 @@ The server that runs the Active Directory services is known as Domain Controller
 #### Active Directory Domain Service (AD DS)
 This service acts as a catalogue that contains all information about the **objects**. The objects are the components in the AD DS.
 The objects include:
-- **Users (Security Principals)**: 
-- .
+
+- **Users (Security Principals)**: An object in AD, also known as the security principles which means that they can be authenticated by the domain and assigned privilege over resources. There are two types of **users** in AD DS.
+	- People: Normal users in the network.
+	- Services: Service as a user. They have privileges only to perform their tasks.
 - 
