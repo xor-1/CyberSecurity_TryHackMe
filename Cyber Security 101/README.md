@@ -701,4 +701,7 @@ The objects include:
 - **Users (Security Principals)**: An object in AD, also known as the security principles which means that they can be authenticated by the domain and assigned privilege over resources. There are two types of **users** in AD DS.
 	- People: Normal users in the network.
 	- Services: Service as a user. They have privileges only to perform their tasks.
+
 - **Machines:** Machines are also objects in the AD, and also considered as **Security Principles** because they are also assigned an account and authenticated when connected to the network but they have very limited access. Machine accounts are not accessed by any other accounts (Local Administrators) whereas other accounts use can use them if you have password. Machines account passwords are rotated over some period of time and of 120 characters long. 
+
+- 
