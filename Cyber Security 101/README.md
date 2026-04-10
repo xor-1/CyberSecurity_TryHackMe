@@ -702,6 +702,6 @@ The objects include:
 	- People: Normal users in the network.
 	- Services: Service as a user. They have privileges only to perform their tasks.
 
-- **Machines:** Machines are also objects in the AD, and also considered as **Security Principles** because they are also assigned an account and authenticated when connected to the network but they have very limited access. Machine accounts are not accessed by any other accounts (Local Administrators) whereas other accounts use can use them if you have password. Machines account passwords are rotated over some period of time and of 120 characters long. 
-
+- **Machines:** Machines are also objects in the AD, and also considered as **Security Principles** because they are also assigned an account and authenticated when connected to the network but they have very limited access. Machine accounts are not accessed by any other accounts (Local Administrators) whereas other accounts use can use them if you have password. Machines account passwords are rotated over some period of time and of 120 characters long.  Machine account name is Machine name followed by a `$` dollar sign.
+- **Security Groups:** Also known as security principles as groups can contain users, machines and other groups also to give access rights to several objects over resources in the network.
 - 
