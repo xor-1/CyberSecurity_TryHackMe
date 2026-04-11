@@ -751,3 +751,50 @@ Set-ADUser -ChangePasswordAtLogon $true -Identity sophie -Verbose
 
 Now RDP into `sophie` and change the password as it will prompt you.
 After login the `flag` is on the desktop.
+
+
+---
+
+
+## Managing Computers in AD:
+
+When a new machine is connected in the AD it is transferred in to the `Computers` container and generally their type is written along with the username. Such as computers, laptops or servers.
+
+At least you will see the following types of machines in the list:
+- Workstation (must be a non privileged user)
+- Server
+- Domain Controllers: The most sensitive device in the network as it contains hashed passwords of all the users in the AD domain.
+
+In the lab, made separate OU for servers and Workstations.
+
+
+---
+
+
+#### Group policies
+we make OUs to apply group policies to different departments. For that we use GPO (Group Policy Objects) as they are the collection of configs that are applied to the OUs at once.
+
+To configure GPOs we will use Group Policy Management Tool from the start menu.
+
+First create the policy in the GPO container and then link in to the respective OU. As a GPO is applied to an OU the OU itself and OUs under it will be affected.
+
+In the lab I examined the default domain policy and saw what inside it!
+
+**Scope:** It tell where is the GPO applied in the Domain. We can also use the `Security Filtering` Option to apply the GPO to specific group of users and machines.
+
+**Settings:** The actual security policy rules that are applied. `Default Domain Policy` only contains computer configurations.
+
+> Note: Each GPO has Configurations related to `Users` and `Computers`
+
+In the lab, I changed the GPO for `Computers` and changed the `minimum password length` from `7` to `10`.
+
+#### GPO Distribution
+GPOs are distributed by `SYSVOL` share on the network so all users must have access to this share for GPO fetch.
+After changing the GPO it might take 2 hours to take effect but if want to make immediate affect, use the following command on that host:
+
+```powershell
+gpupdate /force
+```
+
+
+#### Creating GPOs for THM
