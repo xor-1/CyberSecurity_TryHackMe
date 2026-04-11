@@ -703,5 +703,52 @@ The objects include:
 	- Services: Service as a user. They have privileges only to perform their tasks.
 
 - **Machines:** Machines are also objects in the AD, and also considered as **Security Principles** because they are also assigned an account and authenticated when connected to the network but they have very limited access. Machine accounts are not accessed by any other accounts (Local Administrators) whereas other accounts use can use them if you have password. Machines account passwords are rotated over some period of time and of 120 characters long.  Machine account name is Machine name followed by a `$` dollar sign.
+
 - **Security Groups:** Also known as security principles as groups can contain users, machines and other groups also to give access rights to several objects over resources in the network.
-- 
+
+#### Active Directory Users and Computers
+We can configure users, machines and groups from the **Active Directory Users and Computers** from the start menu.
+The users and computers in here are organized as **Organizational Units (OU)**. These are sets with similar defined security requirements.
+
+We can manage user and other things from here like resetting user password (I remember once I went to IT office for my friend's account password reset.)
+
+always remember to differentiate in **OUs** and **Security groups**. As OUs are used to configure policies according to departmental roles and one user can be a part of one OU at a time. Security groups are used to give access to resources over the network like printer or a shared folder. A user can be a part of multiple groups.
+
+---
+
+
+## Managing users in the Active Directory
+
+Learned how to add and delete OUs and users in the domain.
+Manged the AD environment to the following structure:
+
+![[Pasted image 20260411130508.png]]
+
+
+![[Pasted image 20260411131006.png]]
+
+
+#### Delegation:
+Hehe: doing this module on morning of 11 April when delegations from Iran and America are reaching Islamabad for Ceasefire.
+
+In AD we can use delegation to give control of a OU to a specific user to do specific configurations like resetting passwords. As it allows like `IT Department` to manage users of all departments rather than Domain admins.
+
+In lab I also delegated control to `IT` of all departments.
+
+Now resetting password of `sophie` using `phillip`. First RDP into `phillip`. 
+
+Reset password of any user:
+
+```powershell
+Set-ADAccountPassword sophie -Reset -NewPassword (Read-Host -AsSecureString -Prompt 'New Password') -Verbose
+```
+
+Ask the user to reset password on next logon:
+
+```powershell
+Set-ADUser -ChangePasswordAtLogon $true -Identity sophie -Verbose
+```
+
+Now RDP into `sophie` and change the password as it will prompt you.
+After login the `flag` is on the desktop.
+
