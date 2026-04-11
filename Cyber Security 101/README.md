@@ -751,4 +751,3 @@ Set-ADUser -ChangePasswordAtLogon $true -Identity sophie -Verbose
 
 Now RDP into `sophie` and change the password as it will prompt you.
 After login the `flag` is on the desktop.
-
