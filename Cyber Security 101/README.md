@@ -830,4 +830,65 @@ AND!!! BOOOOOOOOOOOM!!! this error flies straight in to my eyes as one sometimes
  ```
 
 
+---
+
+
+## Authentication Methods
+
+We have discussed two authentication methods in the lab:
+- Kerberos
+- NetNTLM
+
+For now I will only discuss NetNTLM later I will add the Kerberos.
+
+#### NetNTLM
+NetNTLM is a legacy authentication system used still to maintain  compatibility.
+
+**How it works:**
+1. The client sends an `authentication request` to the server.
+2. The server responds with a random number called `challenge`.
+3. The server calculates a `Response` using the `NTLM Hash` (User's hashed password) and `Challenge` from the server.
+4. The client sends the Response to the server and server sends it to the DC along with challenge for verfication.
+5. On the DC, as it also contains the NTLM Hash so it recalculates the response using the NTLM Hash and challenge and compares with the response it received from the server.
+6. According to the calculation the Authentication Status (YAY/NAY) is sent back to the client.
+
+![[Pasted image 20260412134945.png]]
+
+
+#### Trees
+
+we can have sub domains of a domain. For example: `uk.thm.local` and `us.thm.local` of `thm.local`. We can now enforce policies independently and manage both domains separately. Each domain has its domain admin but a new Security Groups is made named `Enterprise Admins` this includes the persons who can manage all the domains and users in them.
+
+![[Pasted image 20260412140556.png]]
+
+
+#### Forest
+
+The union of several trees with different namespaces into the same network is called Forest.
+
+![[Pasted image 20260412140817.png]]
+
+
+#### Trust Relationships
+
+The domains in trees and forests are joined together by `trust relationships`.
+Means we can allow specific users of one domain to access resources in another domain.
+
+**Types of trust relationships**
+- **One way trust relationship:** If there are two domains `AAA` and `BBB` and `AAA` trusts `BBB` so the user authenticated on `BBB` can access the resources on `AAA`. The direction of `Trust` and `Resource` is always contrary in `One way trust relationship`
+- **Two way trust relationship:** We can configure the both domains to trust each other and users can access resources on both ends but after mutual trust we can also customize all the configs to manage them according to our needs.
+
+![[Pasted image 20260412141713.png]]
+
+
+This was indeed the most time taking room in my whole Try Hack Me journey as studying AD for the first time hehe!
+
+#### Room completed:
+
+![[Pasted image 20260412141947.png]]
+
+
+---
+
+
 
