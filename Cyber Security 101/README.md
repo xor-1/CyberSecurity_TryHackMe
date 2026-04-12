@@ -798,3 +798,36 @@ gpupdate /force
 
 
 #### Creating GPOs for THM
+As part of the lab, I have applied the following policies in to the domain.
+
+- Restrict non IT users form accessing the `Control Panel`.
+- After 5 minutes of inactivity, Lock the screen of the users.
+
+Make a new GPO as `Restrict Control Panel Access`, click on `edit` to edit the `User configurations` and then go to `Policies -> Administrative Templates -> Control Panel -> Prohibit Access to Control Panel and PC Settings`
+
+Now click on `edit` and `enable` the policy.
+
+Now drag and drop the GPO to OUs I applied:
+
+![[Pasted image 20260412105943.png]]
+
+
+Now,
+2. **Auto Lock screen GPO for computers**: We can apply them to the root as sub users will not inherit the GPO as it contains the configs for `Computers` only and not for `Users` . Make a new GPO as `Auto Lock Screen` and edit and go to the following path: `Computer configuration -> Policies -> Windows Settings -> Security settings -> Local Policies -> Security options -> Interactive Logon: Machine Inactivity Limit` and set it to `300 seconds` (5 minutes).  Now close the editor and drag the GPO to the `thm.local`. 
+
+Now I have RDP in to the Marketing manager account `Mark`. Lets verify the GPOs applied.
+As I am just checking for the `Control Panel Access` policy. Just opened the `Control Panel` to see what happens. 
+
+AND!!! BOOOOOOOOOOOM!!! this error flies straight in to my eyes as one sometimes in the Uni Lab when i open the `Powershell` or `Control Panel`.
+
+![[Pasted image 20260412111747.png]]
+
+
+> Always remembers the `SYSVOL` and 
+
+ ```powershell
+ gpupdate /force
+ ```
+
+
+
