@@ -1024,3 +1024,105 @@ netstat -h
 
 #### File and Disk Management
 
+To view the current working directory like in linux we use `pwd`, in windows we use:
+
+```powershell
+cd
+```
+
+to list all the contents in the folder we use:
+
+```powershell
+dir
+```
+
+to view hidden and system files:
+
+```powershell
+dir /a
+```
+
+to view all contents of the sub-directories in the directory:
+
+```powershell
+dir /s
+```
+
+To change the directory to `FOLDER` use:
+
+```powershell
+cd FOLDER
+```
+
+to go back or one level up;
+
+```powershell
+cd ..
+```
+
+to make a directory name `FOLDER` use:
+
+```powershell
+mkdir FOLDER
+```
+
+to delete or remove the directory `FOLDER` use:
+
+```powershell
+rmdir FOLDER
+```
+
+we can use the contents of the file by using:
+
+```powershell
+type FILE
+```
+
+for reading a file page by page using piping with `more`
+
+```powershell
+type FILE | more
+```
+
+to copy files:
+
+```powershell
+copy FILE DESTINATION
+```
+
+we can move the files also
+
+```powershell
+move FILE DESTINATION
+```
+
+we can delete a file using `del` or `erase`
+
+```powershell
+erase FILE
+```
+
+we can also use the wildcard character `*`
+
+#### Task and Process Management
+
+To view all the tasks/processes on the system
+
+```powershell
+tasklist
+```
+
+we can terminate a process using:
+
+```powershell
+taskkill /PID <PID>
+```
+
+
+**Room Completed:**
+
+![[Pasted image 20260413135209.png]]
+
+
+---
+
