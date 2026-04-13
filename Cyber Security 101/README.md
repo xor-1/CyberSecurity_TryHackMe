@@ -974,3 +974,53 @@ To check the `IP Address`, `Subnet Mask` and `Default Gateway`.
 ipconfig
 ```
 
+to view all info including `DNS`,  and `DHCP` along with `MAC Address` we can use:
+
+```powershell
+ipconfig /all
+```
+
+To check if we can reach a specific target on the network (also internet).
+
+```powershell
+ping <IP_ADDRESS>
+```
+
+**How does `ping` work:** When a `ping` command is executed, the HOST sends the `ICMP_REQUEST` and upon reaching the SINK and the SINK replies with the `ICMP RESPONSE`. The information displayed on the output is:
+- **BYTES:** size of the packet
+- **time:** basically the RTT(Round Trip Time)
+- **TTL(Time To Live):** The number of hops a packet travels before reaching the destination. Different systems use different TTL, e.g Windows use 128 and Linux use 64. We can estimate the number of hops in between source and destination.
+
+To check the route of the network, that from which hops do our packet travels, we use the command:
+
+```powershell
+tracert <HOST_IP>      # WINDOWS
+traceroute <HOST_IP>   # LINUX
+```
+
+To drive the `IP ADDRESS` from the terminal mostly in Recon, use:
+
+```powershell
+nslookup <IP/DOMAIN>
+```
+
+To check the active network connections and listening ports we use:
+
+```powershell
+netstat
+```
+
+for help use:
+
+```powershell
+netstat -h
+```
+
+- `-a` displays all established connections and listening ports
+- `-b` shows the program associated with each listening port and established connection
+- `-o` reveals the process ID (PID) associated with the connection
+- `-n` uses a numerical form for addresses and port numbers
+
+
+#### File and Disk Management
+
