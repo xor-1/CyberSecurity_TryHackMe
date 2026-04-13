@@ -1126,3 +1126,7 @@ taskkill /PID <PID>
 
 ---
 
+
+## Windows Powershell
+
+`PowerShell` is a task automation and configuration management tool from Microsoft, consisting of a shell and the associated language.
