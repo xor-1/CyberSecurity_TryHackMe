@@ -892,3 +892,44 @@ This was indeed the most time taking room in my whole Try Hack Me journey as stu
 
 
 
+## Command Line
+
+
+## Windows Command Line
+
+#### 1. Introduction
+
+CLI (Command Line Interface), we can use to manage and control the system by using commands instead of moving the mouse and graphics.
+
+**Advantages of CLI:**
+1. Efficient resource management
+2. Automation
+3. Remote systems management
+
+
+The default command-line interpreter of the windows environment is `cmd.exe`
+
+
+#### 2. Basic System Information
+
+The `set` command list specifically the `PATH=` variable that contains all the directories that when a command is executed in the `cmd` the system checks for the command if present in the `PATH=` directories. Otherwise gives an error.
+
+```powershell
+set
+```
+
+Check for the Operating System (OS) version:
+
+```powershell
+ver
+```
+
+Check system information like OS, memory, name and manufacturer etc...
+
+```powershell
+systeminfo
+```
+
+> the command `systeminfo` is in the `Windows/system32/systeminfo.exe` directory which is also a part of the `PATH=`, which we can verify using the `set` command.
+
+
