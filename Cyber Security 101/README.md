@@ -964,3 +964,13 @@ Clear the screen:
 cls
 ```
 
+
+
+#### Network Troubleshooting
+
+To check the `IP Address`, `Subnet Mask` and `Default Gateway`.
+
+```powershell
+ipconfig
+```
+
