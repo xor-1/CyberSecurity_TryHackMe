@@ -932,4 +932,35 @@ systeminfo
 
 > the command `systeminfo` is in the `Windows/system32/systeminfo.exe` directory which is also a part of the `PATH=`, which we can verify using the `set` command.
 
+check all the installed device drivers on the device.
+
+```powershell
+driverquery
+```
+
+if you want more detailed information about device drivers use:
+
+```powershell
+#verbose
+
+driverquery /v
+```
+
+and If you want to read the information page by page you can pipe it using `more` as:
+
+```powershell
+driverquery | more
+```
+
+Use help for any command:
+
+```powershell
+help
+```
+
+Clear the screen:
+
+```powershell
+cls
+```
 
