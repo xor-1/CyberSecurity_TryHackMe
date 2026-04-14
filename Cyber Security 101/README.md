@@ -1139,3 +1139,4 @@ An **object** is an item with **properties** and **methods**, properties of obje
 
 `cmd` commands are simple text based. But when we run commands in PowerShell they are known as `cmdlets` (verb-noun) and they return an object on the output.
 
+
