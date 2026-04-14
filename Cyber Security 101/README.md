@@ -1138,3 +1138,4 @@ It is Object oriented as it can handle many complex data types.
 An **object** is an item with **properties** and **methods**, properties of object `Car` like `Color`, `Model` and methods like `Horn()`, `Drive()` etc.
 
 `cmd` commands are simple text based. But when we run commands in PowerShell they are known as `cmdlets` (verb-noun) and they return an object on the output.
+
