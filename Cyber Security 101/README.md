@@ -1130,3 +1130,5 @@ taskkill /PID <PID>
 ## Windows Powershell
 
 `PowerShell` is a task automation and configuration management tool from Microsoft, consisting of a shell and the associated language.
+
+The version 6.0 and later are cross platform as, it is built using .NET core. Earlier were built using .NET framework which was natively only for windows and now not actively developed.
