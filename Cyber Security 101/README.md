@@ -1134,3 +1134,6 @@ taskkill /PID <PID>
 The version 6.0 and later are cross platform as, it is built using .NET core. Earlier were built using .NET framework which was natively only for windows and now not actively developed.
 
 It is Object oriented as it can handle many complex data types.
+
+An **object** is an item with **properties** and **methods**, properties of object `Car` like `Color`, `Model` and methods like `Horn()`, `Drive()` etc.
+
