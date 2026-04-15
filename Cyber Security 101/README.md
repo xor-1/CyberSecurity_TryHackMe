@@ -1145,4 +1145,93 @@ For example:
 
 For SSH and RDP connections from the `AttackBox` we use `Remmina`.
 
+#### Basic usage:
+
+check the commands (cmdlets, functions and Aliases) we can use in the PowerShell session:
+
+```powershell
+Get-Command
+```
+
+we can also use filters like:
+
+```powershell
+Get-Command -CommandType "Function"
+```
+
+If you want help on a specific word or `cmdlet` use:
+
+```powershell
+Get-Help <NAME>
+```
+
+for example:
+
+```powershell
+Get-Help Get-Date
+```
+
+Alternative names for `cmdlets` just explore it:
+
+```powershell
+Get-Alias
+```
+
+> Collection of `cmdlets` is known as `Modules`
+
+We can also get many `cmdlets` downloaded from the internet to extend the functionalities of powershell by finding it in the repo by its name or patial name if we don't know:
+
+```powershell
+Find-Module -Name "Powershell*"
+```
+
+It will list all the modules starting with the name `Powershell...`
+
+#### Working with files:
+
+List the contents of a directory or a specific directory:
+
+```powershell
+Get-ChildItem
+```
+
+```powershell
+Get-ChildItem -Path "<PATH>"
+```
+
+to change the the current directory to a `PATH`
+
+```powershell
+Set-Location <PATH>
+```
+
+To make make a new file or directory in a single command, unlike cmd or unix we use:
+
+```powershell
+New-Item -Path "<PATH>" -ItemType "Directory/File"
+```
+
+Also for removing we use a unified command:
+
+```powershell
+Remove-Item -Path <PATH>
+```
+
+to copy items:
+
+```powershell
+Copy-Item -Path <PATH> -Destination <DESTINATION>
+```
+
+to move items:
+
+```powershell
+Move-Item -Path <PATH> -Destination <DESTINATION>
+```
+
+To view the content of file like `cat` in linux:
+
+```powershell
+Get-Content -Path <PATH>
+```
 
