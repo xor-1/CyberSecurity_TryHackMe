@@ -1235,3 +1235,46 @@ To view the content of file like `cat` in linux:
 Get-Content -Path <PATH>
 ```
 
+#### Piping, Filtering and Sorting
+
+We use piping `|` to pass the output of one command to the input of another command. In PowerShell piping shares the Objects rather than text.
+
+For example:
+List all the files in the current directory and sort them by length
+
+```powershell
+Get-ChildItem | Sort-Object Length
+```
+
+To filter the Contents with just .txt files
+
+```powershell
+Get-ChildItem | Where-object -Property "Extension" -eq ".txt"
+```
+
+Comparison Operators:
+- eq
+- gt
+- lt
+- ge
+- le
+- ne
+
+- like :
+
+```powershell
+Get-ChildItem | Where-object -Property "Name" -like "ship*"
+```
+
+Select specific properties of objects:
+
+```powershell
+Get-ChildItem | Select-Object Name,Length
+```
+
+The `GREP` of Power Shell:
+
+```powershell
+Select-String -Path "<PATH>" -Pattrn "PATTERN"
+```
+
