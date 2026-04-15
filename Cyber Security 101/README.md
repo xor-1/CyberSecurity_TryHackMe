@@ -1278,3 +1278,84 @@ The `GREP` of Power Shell:
 Select-String -Path "<PATH>" -Pattrn "PATTERN"
 ```
 
+#### System and Network Information
+
+`cmdlet` same as `systeminfo` in `cmd`
+
+```powershell
+Get-ComputerInfo
+```
+
+to view local users on the system:
+
+```powershell
+Get-LocalUser
+```
+
+to get detailed network configs:
+
+```powershell
+Get-NetIPConfiguration
+```
+
+to get IP address info of all interfaces:
+
+```powershell
+Get-NetIPAddress
+```
+
+#### Real Time System Analysis
+
+To view all the processes running on the system:
+
+```powershell
+Get-Process
+```
+
+to view all the services:
+
+```powershell
+Get-Service
+```
+
+to view all the current TCP connections established:
+
+```powershell
+Get-NetTCPConnection
+```
+
+to calculate the hash of a file, use the command along with the `-Path` parameter.
+
+```powershell
+Get-FileHash -Path "<PATH>"
+```
+
+to view the ADS of a file:
+
+```powershell
+Get-Item -Path "<PATH>" -Stream *
+```
+
+`:$DATA` is the default data stream of every NTFS file.
+
+#### Scripting
+
+The process of writing a series of commands to automate a task or for configurations is known as scripting.
+
+Scripting is very helpful for automating tasks in cyber security like enumeration for penetration testers and also helpful for red teamers.
+
+The command used to run commands on the remote server:
+it is used to execute scripts and payloads on the remote machines.
+
+```powershell
+Invoke-Command
+```
+
+**Room Completed:**
+
+![[Pasted image 20260415150650.png]]
+
+
+---
+
+
