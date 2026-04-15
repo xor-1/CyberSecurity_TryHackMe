@@ -1359,3 +1359,118 @@ Invoke-Command
 ---
 
 
+## Linux Shells
+
+**Shell** is the facilitator between the **user** and the **OS**. **Bash** is the default shell in most of the linux distros.
+
+Done most of the basic commands in the previous rooms so skipping now like `cd`, `pwd`, `ls`.
+
+#### Types of linux shells
+
+The file `/etc/shells` contain the available shells. We can view it by using `cat /etc/shells`
+
+To switch the shell type we can just type the name of the shell present on the system and it will open.
+
+I want to change the default shell permanently:
+
+```bash
+chsh -s /PATH_TO_SHELL
+```
+
+#### Bourne Again Shell (Bash):
+
+It is the enhanced version of the old shells like `sh`, `ksh` and `csh`. It includes unique capabilities like `history` and `Tab Completion`.
+
+#### Friendly Interactive Shell (Fish):
+
+It also provides the capabilities of Bash but as its name suggests, provides user friendliness and customization with different fish themes and colors.
+
+#### Z Shell (Zsh):
+
+Zsh is not installed by default on must linux distros. It offers advanced tab completion, customization options.
+
+#### Shell Scripting and components:
+
+Scripting is nothing just a series of commands to perform a task.
+
+**Steps in writing a Bash Script:**
+
+Make a file with the extension `.sh`.
+
+```bash
+nano file_name.sh
+```
+
+Start with the `Shebang` line. They are characters added at the start of the script with the name of the interpreter followed by `#!`.
+
+```bash
+#!/bin/bash
+```
+
+```shell
+# Defining the Interpreter 
+#!/bin/bash
+echo "Hey, what’s your name?"
+read name
+echo "Welcome, $name"
+```
+
+now give the execute permissions to the script:
+
+```shell
+sudo chmod +x filename.sh 
+```
+
+Now execute it using `./`. We tell the shell to execute the script in the current directory. Otherwise It will give an error.
+
+> The `.` represents the current directory.
+
+```shell
+./filename.sh
+```
+
+In the scripts, we can also use the `loops`, `conditions` and `comments`.
+
+#### THE LOCKER SCRIPT:
+
+```shell
+# Defining the Interpreter 
+#!/bin/bash 
+
+# Defining the variables
+username=""
+companyname=""
+pin=""
+
+# Defining the loop
+for i in {1..3}; do
+# Defining the conditional statements
+        if [ "$i" -eq 1 ]; then
+                echo "Enter your Username:"
+                read username
+        elif [ "$i" -eq 2 ]; then
+                echo "Enter your Company name:"
+                read companyname
+        else
+                echo "Enter your PIN:"
+                read pin
+        fi
+done
+
+# Checking if the user entered the correct details
+if [ "$username" = "John" ] && [ "$companyname" = "Tryhackme" ] && [ "$pin" = "7385" ]; then
+        echo "Authentication Successful. You can now access your locker, John."
+else
+        echo "Authentication Denied!!"
+fi
+```
+
+
+**Room Completed:**
+
+![[Pasted image 20260415185638.png]]
+
+
+---
+
+
