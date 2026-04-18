@@ -1475,4 +1475,10 @@ fi
 
 
 
+#### Networking concepts:
 
+Not making notes as already in the **Pre Security** path I made notes of OSI model. I can later reference there if needed.
+
+The TCP/IP model was also covered in the presecurity path.
+
+Also did IP addresses, subnets and routing, encapsulation, TCP, UDP in presecurity path.

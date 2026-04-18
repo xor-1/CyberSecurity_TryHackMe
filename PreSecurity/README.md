@@ -236,7 +236,10 @@ Some notable headers in an IP packets are as follows:
 	- **Source IP:** The IP address of the device from which the data is sent.
 	- **Dest. IP:** The IP address of the device to which the data is sent.
 	- **Sequence Number:** In each session when first packet is sent it is assigned a random number.
-	- **Acknowledgement Number:** After the first packet the later packets are assigned numbers +1.
+	- **Acknowledgement Number:**
+		1. SYN Packet: The client initiates the connection by sending a SYN packet to the server. This packet contains the client’s randomly chosen initial sequence number.
+		2. SYN-ACK Packet: The server responds to the SYN packet with a SYN-ACK packet, which adds the initial sequence number randomly chosen by the server.
+		3. ACK Packet: The three-way handshake is completed as the client sends an ACK packet to acknowledge the reception of the SYN-ACK packet.
 	- **[[#What are packets and frames | Checksum]]:** Discussed above.
 	- **Data:** The actual data for example the file.
 	- **Flag:** This header determines how the packet should be handled by either device during the handshake process.
