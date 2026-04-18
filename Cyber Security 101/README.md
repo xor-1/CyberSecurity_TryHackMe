@@ -1492,3 +1492,62 @@ Also did IP addresses, subnets and routing, encapsulation, TCP, UDP and telnet i
 
 
 
+#### Networking Essentials
+
+#### Ping:
+- ICMP Echo Request (type 8)
+- ICMP Echo Response (type 0)
+- ICMP time exceed message (type 11)
+
+for sending specific number of packets in UNIX based systems through ping:
+
+```Bash
+ping <IPADDRESS> -c <NUMBER_OF_PACKETS>
+```
+
+#### Traceroute:
+A tool in networking used to discover the routers (hops) between our system and the destination.
+On each router the router forwards the ICMP packet to our machine.
+
+Command:
+
+```bash
+traceroute <IP>
+```
+
+for Windows it is:
+
+```cmd
+tracert <IP>
+```
+
+
+#### Routing
+When there are multiple networks are connected together through multiple links so there must be an algorithm to define the best path for the packets to travel.
+
+**Routing Alogrithms:**
+- OSPF (Open Shortest Path First)
+- RIP (Routing Information Protocol)
+- EIGRP (Enhanced Interior Gateway Routing Protocol)
+- BGP (Border Gateway Protocol)
+
+#### Network Address Translation (NAT):
+To control the depletion of IPv4 addresses, NAT was introduced.
+**Simple concept:** Use local IP addresses behind just one public IP address to connect the devices to the internet.
+
+The router maintains a NAT Table to map internal ip address and port number of a device to the public IP address assigned to the router with a specific port number for that device.
+
+![[Pasted image 20260418202916.png]]
+
+
+
+**Room Completed:**
+
+![[Pasted image 20260418203208.png]]
+
+
+
+---
+
+
+
