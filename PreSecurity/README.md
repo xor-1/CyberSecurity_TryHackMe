@@ -110,6 +110,7 @@ When an **ARP request** is sent, a message is broadcasted on the network to o
 
 - DHCP:
 	- IP addresses can be assigned **manually** or **automatically using DHCP**. With DHCP, a device requests an IP when it joins a network, the DHCP server offers one, the device accepts it, and the server confirms—allowing the device to start using the IP address.
+	- The server listens on UDP port 67 and client sends from UDP 68.
 	- Requests:
 		- DHCP discover
 		- DHCP offer
