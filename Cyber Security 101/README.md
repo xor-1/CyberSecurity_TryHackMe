@@ -1689,4 +1689,16 @@ wireshark
 
 The local system must have any GUI installed.
 
+#### SFTP and FTPS:
+
+The **SFTP (SSH File Transfer Protocol)** is used to transfer files over the SSH connection and yes the same port 22.
+Command:
+
+```shell
+sftp username@hostname
+```
+
+once logged in we can transfer files using `get filename` and `put filename` on the server. Its commands are most likely to SSH.
+
+While, FTPS means File Transfer Protocol Secure and yeah the TLS is used in it. It requires special certificate setup. Its commands are of FTP.
 
