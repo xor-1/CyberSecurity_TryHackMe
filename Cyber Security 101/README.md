@@ -1716,3 +1716,9 @@ We have explored three ways to make communication secure:
 2. SSH
 3. VPN
 
+#### Practical:
+
+Before capturing packets in to the wireshark run the browser for example `chromium` as `--ssl-key-log-file=~/ssl-key.log` and then open `wireshark` to capture packets.
+
+In this practical we have the `.pcap` file and `.log` file.
+
