@@ -1551,3 +1551,31 @@ The router maintains a NAT Table to map internal ip address and port number of a
 
 
 
+#### Networking Core Protocols
+
+
+**1. DNS (Domain Name System):** - Already done in the **PreSecurity** Path so just reading it properly again and not making any notes.
+
+#### WHOIS:
+To check the information about the domain and its registerer. Can be used in terminal and on website.
+
+#### FTP: 
+A protocol for file transfer to remote.
+FTP Commands that are sent to the server for enumeration on the backend:
+- USER
+- PASS
+- RETR
+- STOR
+
+
+#### SMTP:
+Used to send mails.
+It defines rules how to send mail to server and how server sends to another.
+
+Like FTP it also works on some commands defined by the protocol:
+- HELO: It initiates an SMTP connection.
+- MAIL FROM: The sender's email address.
+- RCPT TO: The recipient email address.
+- DATA: The message to be send.
+- `.`: A dot in the end by self indicates end of message.
+
