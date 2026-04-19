@@ -1579,3 +1579,41 @@ Like FTP it also works on some commands defined by the protocol:
 - DATA: The message to be send.
 - `.`: A dot in the end by self indicates end of message.
 
+On command line, to use SMTP we use TELNET.
+
+#### POP3:
+The protocol used to retrieve mails from the server to the local client.
+
+It also used some commands to perform operations:
+- USER
+- PASS
+- STAT
+- LIST
+- RETR <message_number>
+- DELE <message_number>
+- QUIT
+
+The POP3 server by default runs at port 110.
+
+#### IMAP (Internet Message Access Protocol): 
+A protocol used for email synchronization across multiple devices. It also uses some commands as directed by the IMAP protocol.
+
+	LOGIN <username> <password>
+	SELECT <mailbox>
+	FETCH <mail_number> <data_item_name>
+	MOVE <sequence_set> <mailbox>
+	COPY <sequence_set> <data_item_name>
+	LOGOUT
+
+by default IMAP runs on port 143.
+
+**Room Completed:**
+
+![[Pasted image 20260419133419.png]]
+
+
+
+---
+
+
+
