@@ -1722,3 +1722,13 @@ Before capturing packets in to the wireshark run the browser for example `chromi
 
 In this practical we have the `.pcap` file and `.log` file.
 
+After applying the log file I found the decrypted creds.
+
+**Room Completed:**
+
+![[Pasted image 20260420000428.png]]
+
+
+---
+
+
