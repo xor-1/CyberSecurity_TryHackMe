@@ -1702,3 +1702,11 @@ once logged in we can transfer files using `get filename` and `put filename` on 
 
 While, FTPS means File Transfer Protocol Secure and yeah the TLS is used in it. It requires special certificate setup. Its commands are of FTP.
 
+
+#### VPN:
+Virtual Private Network
+Used to provide Virtual and Private connections to the users.
+VPNs are used for connecting offices like they are in the same network or provide confidentiality or gain access to geo logical restricted content.
+
+Some VPNs can also leak our Public Ip so DNS leak tests are mandatory.
+
