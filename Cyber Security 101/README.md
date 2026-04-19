@@ -1710,3 +1710,9 @@ VPNs are used for connecting offices like they are in the same network or provid
 
 Some VPNs can also leak our Public Ip so DNS leak tests are mandatory.
 
+#### Conclusion:
+We have explored three ways to make communication secure:
+1. TLS
+2. SSH
+3. VPN
+
