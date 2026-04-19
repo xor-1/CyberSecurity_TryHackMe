@@ -1617,3 +1617,76 @@ by default IMAP runs on port 143.
 
 
 
+#### Networking Secure Protocols:
+
+#### TLS (Transport Layer Security):
+Built on the top of SSL (Secure Socket Layer) to provide security to Application layer running on transport layer. Protocols like HTTP, SMTP, POP3, IMAP becomes HTTPS, SMTPS, POP3S, IMAPS. `S` means `Secure`. 
+
+#### HTTPS:
+For a standard HTTP protocol we communicate in the following order.
+- Establish 3 way TCP handshake with the server.
+- Communicate using the HTTP protocol.
+
+but in using TLS over HTTP its a  bit like this:
+- Establish 3 way TCP handshake
+- Establish TLS session
+- Communicate using the HTTP protocol
+
+Firstly the 3 way tcp handshake is done then TLS session is established and then request and response from server over HTTP are transferred but in packets we see them as TLS packets in which application data is travelling over port 443. In general we don't know what is travelling inside it but due to port we can estimate that the HTTP is being used.
+
+![[Pasted image 20260419230126.png]]
+
+
+The contents of the packets are just like this and we can't see it without the encryption key.
+
+![[Pasted image 20260419230244.png]]
+
+
+To see the contents of the encrypted traffic we can give Encryption Key to wireshark and then we will be able to see the traffic.
+
+![[Pasted image 20260419230939.png]]
+
+
+#### SMTPS, POP3S, IMAPS:
+All point from HTTPS also apply to these protocols. The port number changes as follows:
+
+![[Pasted image 20260419231308.png]]
+
+
+#### SSH:
+This protocol is used to provide secure communication w.r.t TELNET. Today almost every SSH client uses Open-SSH libraries and source code for SSH.
+
+SSH provides following functions:
+- Secure Authentication
+- Confidentiality
+- Integrity
+- Tunneling
+- x11 Fowarding : -X (to use the Graphical User Interface of the remote machine on local machine.)
+
+to use it:
+
+```shell
+ssh username@hostname
+```
+
+and if to use on the same system and same user is loggedin:
+
+```shell
+ssh hostname
+```
+
+for example to run wireshark on the remote system:
+
+```shell
+ssh username@hostname -X
+```
+
+after authentication:
+
+```shell
+wireshark
+```
+
+The local system must have any GUI installed.
+
+
