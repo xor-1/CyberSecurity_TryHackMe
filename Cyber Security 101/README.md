@@ -1749,4 +1749,4 @@ Wireshark just allows us to read and investigate the packets in depth so this to
 - Packet sniffing
 - Merging files
 - Colorizing packets (temporary and permanent)
-
+- View file details (statistics)
