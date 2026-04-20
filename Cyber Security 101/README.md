@@ -1732,3 +1732,14 @@ After applying the log file I found the decrypted creds.
 ---
 
 
+## Wireshark
+
+It is a most commonly used network traffic analyzer tool. The packets are captured in PCAP files and then inspected using wireshark.
+
+Use Cases:
+1. For detecting anomalies and congestions.
+2. For security problems
+3. For learning purposes
+
+Wireshark just allows us to read and investigate the packets in depth so this tool solely relies on the analysts knowledge and skills.
+
