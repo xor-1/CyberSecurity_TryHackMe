@@ -1760,3 +1760,20 @@ We analyze the packet in to given layers of the OSI model as It gives a better u
 
 **E-Tag:** It is a HTTP response header for a resource to help browsers store the cache and avoid to redownload the content by checking if the resource is current by matching it with on the server.
 
+#### Packet Navigation
+
+We explore the following ways to navigate a packet:
+
+- Packet numbering
+- Go to Packet
+- Mark packets for further investigations
+- Packet Comments
+- Export packets to a new file
+- Export Objects (Files): I also learned how to export files and calculate their hashes for analysis.
+
+![[Pasted image 20260420153446.png]]
+
+- Merge Files
+- Time Display Format (ctrl + alt + 7)
+- Expert Info
+
