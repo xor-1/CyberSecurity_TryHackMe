@@ -1776,4 +1776,3 @@ We explore the following ways to navigate a packet:
 - Merge Files
 - Time Display Format (ctrl + alt + 7)
 - Expert Info
-
