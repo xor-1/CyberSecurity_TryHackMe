@@ -1,5 +1,4 @@
-![[Pasted image 20260420174248.png]]
-
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260420174248.png)
 
 
 ## Introduction to Cyber Security
@@ -498,7 +497,7 @@ Layer 3 switches work in terms of VLANs.
 
 **Room Completed:**
 
-![image](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260208230941.png)
+![image|60](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/PreSecurity/Pasted%20image%2020260208230941.png)
 
 
 ---
