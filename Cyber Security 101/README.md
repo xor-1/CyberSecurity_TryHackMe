@@ -1750,3 +1750,13 @@ Wireshark just allows us to read and investigate the packets in depth so this to
 - Merging files
 - Colorizing packets (temporary and permanent)
 - View file details (statistics)
+
+#### Packet Dissection:
+
+It is used to dissect the protocol into more details.
+We analyze the packet in to given layers of the OSI model as It gives a better understanding of the packets.
+
+![[Pasted image 20260420142056.png]]
+
+**E-Tag:** It is a HTTP response header for a resource to help browsers store the cache and avoid to redownload the content by checking if the resource is current by matching it with on the server.
+
