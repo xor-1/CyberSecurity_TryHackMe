@@ -1743,3 +1743,10 @@ Use Cases:
 
 Wireshark just allows us to read and investigate the packets in depth so this tool solely relies on the analysts knowledge and skills.
 
+**Just covered:**
+- GUI before pcap loading
+- GUI after PCAP loading
+- Packet sniffing
+- Merging files
+- Colorizing packets (temporary and permanent)
+
