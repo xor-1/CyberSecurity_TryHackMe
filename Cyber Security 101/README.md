@@ -1776,3 +1776,59 @@ We explore the following ways to navigate a packet:
 - Merge Files
 - Time Display Format (ctrl + alt + 7)
 - Expert Info
+
+#### Packet Filtering
+To focus on the specific event we need filters.
+
+**Types of filters:**
+- Capture Filters
+- Display Filters
+
+**For display Filters we have two ways:**
+- Use Filter Queries
+- Use Right Click Menu
+
+**Applying filters:**
+- Apply as Filter (apply on a single entity of a packet)
+- Conversation Filter (apply on a whole packet to reduce the noise and use it as a filter)
+- Colourise conversation
+- Prepare as Filter
+- Apply as Column
+- Follow Stream
+
+**Simple Display Filter queries:**
+- **Filter by protocol:**
+
+```wireshark
+arp
+```
+
+- **Filter by port:**
+
+```wireshark
+tcp.port==<port_number>
+```
+
+or
+
+```wireshark
+udp.port==<port_number>
+```
+
+- **Filter by IP address:**
+
+```wireshark
+ip.addr==<IP_ADDRESS>
+```
+
+
+**Room Completed**
+
+![[Pasted image 20260420223036.png]]
+
+
+
+---
+
+
+
