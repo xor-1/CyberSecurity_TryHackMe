@@ -1891,3 +1891,26 @@ for both DNS names and Port numbers:
 sudo tcpdump -i <INTERFACE> -nn
 ```
 
+#### For verbosity
+
+```
+Flags:
+-v
+
+-vv
+
+-vvv
+```
+
+
+#### Filtering by host
+
+```
+host IP
+
+#or
+
+host DOMAIN
+```
+
+
