@@ -1835,3 +1835,59 @@ ip.addr==<IP_ADDRESS>
 
 It is a command line tool for packet analysis and troubleshooting the network build on top of the `libpcap` (written in `C` / `C++`) library.
 
+Things to do on `tcpdump`:
+
+#### Select Network Interface:
+
+```
+-i INTERFACE
+```
+
+for example:
+
+```
+-i any      # for all interfaces
+```
+
+```
+-i eth0      # for Ethernet0
+```
+
+
+#### Saving to a file:
+
+```
+sudo tcpdump -i <INTERFACE> -w FILE.pcap
+```
+
+In this saving to a file mode we will not be able to scroll and see packets in the terminal.
+
+#### Reading from a file
+
+```
+sudo tcpdump -r FILE.pcap
+```
+
+used for understanding the protocols in a specific time frame or used for investigating an attack.
+
+#### Capture specified number of packets:
+
+```
+sudo tcpdump -i <INTERFACE> -c COUNT
+```
+
+
+#### Do not resolve IP addresses and Port numbers:
+
+for avoiding the DNS names:
+
+```
+sudo tcpdump -i <INTERFACE> -n
+```
+
+for both DNS names and Port numbers:
+
+```
+sudo tcpdump -i <INTERFACE> -nn
+```
+
