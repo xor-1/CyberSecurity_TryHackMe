@@ -1941,3 +1941,39 @@ or we can also limit in to a specific destination port:
 sudo tcpdump dst port <port>
 ```
 
+#### Filter by protocol
+
+we can filter the traffic using the protocol:
+
+```
+sudo tcpdump icmp
+```
+
+or
+
+```
+sudo tcpdump tcp
+```
+
+or
+
+```
+sudo tcpdump udp
+```
+
+#### Logical operators for filters:
+
+```
+and
+
+or
+
+not
+```
+
+we can use these filters to capture traffic based on conditions, For example:
+
+```
+sudo tcpdump -i any port 53 and host 1.1.1.1 and icmp
+```
+
