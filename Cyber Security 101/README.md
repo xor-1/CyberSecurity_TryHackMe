@@ -1961,6 +1961,7 @@ or
 sudo tcpdump udp
 ```
 
+we can also use ports as `ip` and `ip6`.
 #### Logical operators for filters:
 
 ```
