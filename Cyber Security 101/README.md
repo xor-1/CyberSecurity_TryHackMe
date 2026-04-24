@@ -1906,11 +1906,18 @@ Flags:
 #### Filtering by host
 
 ```
-host IP
-
-#or
-
-host DOMAIN
+host IP/DOMAIN
 ```
 
+or just filtering it for source IP/DOMAIN:
+
+```
+src host IP/DOMAIN
+```
+
+or just filtering it for destination IP/DOMAIN:
+
+```
+dst host IP/DOMAIN
+```
 
