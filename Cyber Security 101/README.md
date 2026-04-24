@@ -1921,3 +1921,23 @@ or just filtering it for destination IP/DOMAIN:
 dst host IP/DOMAIN
 ```
 
+#### Filter by port
+
+```
+sudo tcpdump port <PORT>
+```
+
+usually it is used for investigating specific traffic such as traffic of DNS to port 53 checking the DNS queries.
+
+if we want to limit it to a specific source port:
+
+```
+sudo tcpdump src port <port>
+```
+
+or we can also limit in to a specific destination port:
+
+```
+sudo tcpdump dst port <port>
+```
+
