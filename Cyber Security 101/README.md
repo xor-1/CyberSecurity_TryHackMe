@@ -2065,3 +2065,7 @@ tcpdump -r traffic.pcap -n arp -e
 ---
 
 
+## Nmap:
+
+The basics of Nmap:
+
