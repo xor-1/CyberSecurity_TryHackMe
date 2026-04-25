@@ -1978,3 +1978,70 @@ we can use these filters to capture traffic based on conditions, For example:
 sudo tcpdump -i any port 53 and host 1.1.1.1 and icmp
 ```
 
+
+#### Advanced Filtering:
+
+
+Packets greater than or equal to length:
+
+```
+tcpdump -r traffic.pcap greater <SIZE> -n
+```
+
+Packets less than or equal to length:
+
+```
+tcpdump -r traffic.pcap less <SIZE> -n
+```
+
+#### Binary Operators:
+
+```
+& (AND)     | (OR)      ! (NOT)
+```
+
+#### Filtering based on header bytes:
+
+```
+proto[expr:size]
+```
+
+- `proto`: can be any protocol like `tcp`, `udp`, `ip`, `ip6`, `ether.
+
+- `expr`: It is the offset of the header byte `0` means first byte.
+
+- `size`: It refers to the number of bytes that interest us. It can be `1`, `2` or `3`. By default it is `1`.
+
+**Forexample:**
+
+- `ether[0] & 1 != 0` takes the first byte in the Ethernet header and the decimal number 1 (i.e., `0000 0001` in binary) and applies the `&` (the And binary operation). It will return true if the result is not equal to the number 0 (i.e., `0000 0000`). The purpose of this filter is to show packets sent to a multicast address. A multicast Ethernet address is a particular address that identifies a group of devices intended to receive the same data.
+
+- `ip[0] & 0xf != 5` takes the first byte in the IP header and compares it with the hexadecimal number F (i.e., `0000 1111` in binary). It will return true if the result is not equal to the (decimal) number 5 (i.e., `0000 0101` in binary). The purpose of this filter is to catch all IP packets with options.
+
+#### Filtering by TCP Flgs:
+
+we can use the expression `tcp[tcpflags] == [flagname]` to filter the packets based on its tcp flags.
+
+We have the following flags in tcp:
+
+- `tcp-syn`
+- `tcp-ack`
+- `tcp-fin`
+- `tcp-rst`
+- `tcp-push`
+
+**For example:**
+
+```
+tcpdump "tcp[tcpflags] == tcp-syn" -r traffic.pcap
+```
+
+
+
+
+
+
+
+
+
+
