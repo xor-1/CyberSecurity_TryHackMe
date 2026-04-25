@@ -2106,3 +2106,12 @@ We do the steps for remote network host discovery. The difference is in the back
 
 If a reply is received from any of its requests, it means the host is up.
 
+We can scan the hosts using the specific ports and protocol ping as:
+
+```
+-PS[ports]      # Ping with SYN
+-PA[ports]      # Ping with ACK
+-PU[ports]      # Ping with UDP
+```
+
+we can use the `-sL` flag to list the host and confirm before scanning.
