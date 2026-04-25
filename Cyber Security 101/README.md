@@ -2058,8 +2058,19 @@ tcpdump -r traffic.pcap -n arp -e
 
 **Room Completed:**
 
-![[Pasted image 20260425133331.png]]
+![[Pasted image 20260425133331.png|697]]
 
+
+**Side Knowledge:**
+
+The modern website DNS resolution steps include:
+1. **A Record**: This maps a domain name to an IPv4 address.
+2. **AAAA Record**: This maps a domain name to an IPv6 address.
+3. **A Record Response**: The DNS server provides the corresponding IPv4 address for the queried domain.
+4. **AAAA Record Response**: Similarly, the DNS server provides the corresponding IPv6 address.
+5. **PTR Record**: This is used for reverse DNS lookups, mapping an IP address back to a domain name.
+6. **PTR Response**: The DNS server provides the domain name associated with the queried IP address.
+7. **OPT Record**: Each DNS packet may include an OPT pseudo-record for additional features like EDNS (Extension Mechanisms for DNS) to support larger packet sizes or other DNS options.
 
 
 ---
@@ -2068,4 +2079,30 @@ tcpdump -r traffic.pcap -n arp -e
 ## Nmap:
 
 The basics of Nmap:
+
+#### Host Discovery:
+
+##### Local-network Host discovery scans
+
+For host discovery we use the `-sn` option in `nmap`.
+
+we can give `nmap` for scanning:
+- IP range e.g `192.168.100.1-255`
+- Subnet e.g `192.168.100.1/24`
+- Hostname e.g `business.careho.pk`
+
+> use `nmap` as a `root` or use `sudo` to maximize its capabilities.
+
+Using the command with `sudo` or as `root` will also list the `MAC Address` of the hosts.
+
+When scanning a local network (directly connected to), the `nmap` starts with sending the `ARP` requests and when a host replies with its `MAC Address`, `nmap` tags it as `Host is up!`.
+
+![[Pasted image 20260425160756.png]]
+
+
+##### Remote-Network host discovery scans
+
+We do the steps for remote network host discovery. The difference is in the back end working of `nmap`. The `nmap` send two `ICMP echo Request`, two `TCP SYN` requests, two `TCP ACK` requests, two `ICMP timestamp Request` to check if the host is online or not.
+
+If a reply is received from any of its requests, it means the host is up.
 
