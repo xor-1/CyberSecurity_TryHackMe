@@ -2040,6 +2040,8 @@ tcpdump "tcp[tcpflags] == tcp-syn" -r traffic.pcap
 tcpdump "tcp[tcpflags] & (tcp-syn|tcp-ack) != 0"
 ```
 
+#### Displaying Packets in terminal in different formats:
+
 
 
 
