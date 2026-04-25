@@ -2056,5 +2056,12 @@ We use different flags with the display filters for the type in which we want to
 tcpdump -r traffic.pcap -n arp -e
 ```
 
+**Room Completed:**
+
+![[Pasted image 20260425133331.png]]
+
+
+
+---
 
 
