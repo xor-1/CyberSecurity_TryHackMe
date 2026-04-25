@@ -2036,6 +2036,9 @@ We have the following flags in tcp:
 tcpdump "tcp[tcpflags] == tcp-syn" -r traffic.pcap
 ```
 
+```
+tcpdump "tcp[tcpflags] & (tcp-syn|tcp-ack) != 0"
+```
 
 
 
