@@ -2042,11 +2042,19 @@ tcpdump "tcp[tcpflags] & (tcp-syn|tcp-ack) != 0"
 
 #### Displaying Packets in terminal in different formats:
 
+We use different flags with the display filters for the type in which we want to see the data.
 
+`-q`: A quick brief output of each packet.
+`-e`: The Link layer level output of the packets (MAC).
+`-A`: Display in ASCII.
+`-xx`: Display in Hexadecimal format also known as hex.
+`-X`: Display in Hex and ASCII.
 
+**For example:**
 
-
-
+```
+tcpdump -r traffic.pcap -n arp -e
+```
 
 
 
