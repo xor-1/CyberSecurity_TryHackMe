@@ -2116,3 +2116,50 @@ We can scan the hosts using the specific ports and protocol ping as:
 
 we can use the `-sL` flag to list the host and confirm before scanning.
 
+
+#### Port scanning:
+
+**Connect Scan:**
+
+```
+nmap -sT <target>
+```
+
+Completes a full TCP 3 way handshake.
+
+- If port is open: Full TCP 3 way handshake is established and then RST,  ACK is sent.
+- If the port is closed on sending the SYN, we receive RST, ACK
+
+
+**Stealth Scan:**
+
+```
+nmap -sS <target>
+```
+
+Just does the first step in the TCP 3 way handshake.
+
+- If the port is open, on receiving the `SYN, ACK`, `nmap` sends `RST` and terminates the connection.
+- If the port is closed, we receive the same in the `Connect Scan`. (`RST,ACK`)
+
+
+**UDP Scan:**
+
+```
+nmap -sU <target>
+```
+
+It sends empty or specialized UDP packets to the target.
+
+- If the port is open we will receive a UDP packet.
+- If the port is open and we receive no response then the port is `Open | Filtered`. Maybe behind a firewall.
+- If the port is closed, we receive an `ICMP, host unreachable, Type3,code3` error packet.
+
+#### Limiting the ports:
+
+By default, nmap scans 1000 common ports
+
+`-F`: Fast Scan, nmap scans 100 top common ports.
+`-p-`: Gives the range all ports (1-65535).
+`-p[range]`: For example, `-p20-50`, scans from `port` `20` to `50`.
+
