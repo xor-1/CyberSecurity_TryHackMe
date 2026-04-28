@@ -2193,3 +2193,15 @@ During the host discovery phase some hosts donot respond to ICMP requests and nm
 nmap -Pn -sS <target>
 ```
 
+
+#### Nmap Timing templates:
+
+To control the speed of scanning, `nmap` provides us with the timing templates as:
+
+- Paranoid - `T0`
+- Sneaky - `T1`
+- Polite - `T2`
+- Normal - `T3`
+- Aggressive - `T4`
+- Insane - `T5`
+
