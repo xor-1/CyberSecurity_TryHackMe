@@ -2163,3 +2163,33 @@ By default, nmap scans 1000 common ports
 `-p-`: Gives the range all ports (1-65535).
 `-p[range]`: For example, `-p20-50`, scans from `port` `20` to `50`.
 
+
+#### Service version and OS detection:
+
+
+**OS Detection:**
+
+```
+nmap -O <target>
+```
+
+**Version detection:**
+
+```
+nmap -sV <target>
+```
+
+**If we want All-in-one `-O`, `-sV` and `traceroute` among other things:**
+
+```
+nmap -A <target>
+```
+
+**Forcing port scanning:**
+
+During the host discovery phase some hosts donot respond to ICMP requests and nmap marks them as offline and skip the port scanning for those ports But in actual they are online. To firce the nmap to do port scanning for those hosts, we use :
+
+```
+nmap -Pn -sS <target>
+```
+
