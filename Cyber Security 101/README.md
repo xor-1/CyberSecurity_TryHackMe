@@ -2225,5 +2225,37 @@ nmap --min-rate <PACKETS> <TARGET>
 nmap --max-rate <PACKETS> <TARGET>
 ```
 
+To control the timeout for slow hosts in nmap:
+
+```
+nmap --host-timeout <TIME> <TARGET>
+```
+
+**For Verbosity:**
+
+we can use `-v` or increase it as `-vv` or `-vvvv`. We can also write it as `-v2` or `-v4`. We can press `v` during the scan to increase the verbosity.
+
+**For Debugging:**
+
+We can add option `-d` to get debugging level output. We can go up to `-d9`.
+
+**Reporting:**
+
+We can export the results to files as follows:
+
+1. `-oN`: Normal output as terminal.
+2. `-oX`: XML output.
+3. `-oG`: The `grep`-able output.
+4. `-oA`: Exports in all major formats mentioned above.
+
+
+**Room Completed:**
+
+
+![[Pasted image 20260501143524.png]]
+
+
+
+---
 
 
