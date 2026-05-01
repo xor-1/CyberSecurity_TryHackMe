@@ -2205,3 +2205,25 @@ To control the speed of scanning, `nmap` provides us with the timing templates a
 - Aggressive - `T4`
 - Insane - `T5`
 
+To control the max number of probes:
+
+```
+nmap --min-parallelism <PROBE> <TARGET>
+```
+
+To control the max number of probes:
+
+```
+nmap --max-parallelism <PROBE> <TARGET>
+```
+
+To control the rate packets are sent per second:
+
+```
+nmap --min-rate <PACKETS> <TARGET>
+
+nmap --max-rate <PACKETS> <TARGET>
+```
+
+
+
