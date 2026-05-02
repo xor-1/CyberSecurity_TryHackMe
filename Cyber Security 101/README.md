@@ -2283,3 +2283,22 @@ The practice and study of techniques used secure the communication and data prot
 
 > ***THOROUGHLY DISCUSSED AND REVISED CAESER CIPHER ALGORITHM.***
 
+
+#### Types of cryptography:
+
+##### Symmetric Encryption:
+The type of ciphers in which the same key is used for encryption and decryption. Key must be kept secret. Also known as private key cryptography.
+
+**Examples:**
+- DES
+- 3DES
+- AES
+
+##### Asymmetric cryptography:
+The pair of keys are used for encryption and decryption. For confidentiality, this cryptography protects the data using the receiver's public key. Hence, also known as Public Key Cryptography.
+
+**Examples:**
+- RSA
+- Diffie Hellman
+- ECC (Elliptic Curve Cryptography)
+
