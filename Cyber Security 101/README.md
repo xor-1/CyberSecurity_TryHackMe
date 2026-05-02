@@ -2271,6 +2271,8 @@ The practice and study of techniques used secure the communication and data prot
 - Integrity
 - Authenticity
 
+> ***REVISED THE BASIC PROCESS OF ENCRYPTION AND DECRYPTION.***
+
 **New Terms:**
 1. plaintext
 2. ciphertext
