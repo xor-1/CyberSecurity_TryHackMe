@@ -2281,3 +2281,5 @@ The practice and study of techniques used secure the communication and data prot
 5. encryption
 6. decryption
 
+> ***THOROUGHLY DISCUSSED AND REVISED CAESER CIPHER ALGORITHM.***
+
