@@ -2302,3 +2302,42 @@ The pair of keys are used for encryption and decryption. For confidentiality, th
 - Diffie Hellman
 - ECC (Elliptic Curve Cryptography)
 
+#### Maths in crypto:
+
+##### XOR Operation:
+
+| A   | B   | A ⊕ B |
+| --- | --- | ----- |
+| 0   | 0   | 0     |
+| 0   | 1   | 1     |
+| 1   | 0   | 1     |
+| 1   | 1   | 0     |
+
+**Properties:**
+- A ⊕ A = 0
+- A ⊕ 0 = A
+- Commutative
+- Associative
+
+##### Modulo Operation:
+
+X % Y = N, where N is the remainder.
+
+- 25%5 = 0 because 25 divided by 5 is 5, with a remainder of 0, i.e., 25 = 5 × 5 + 0
+- 23%6 = 5 because 23 divided by 6 is 3, with a remainder of 5, i.e., 23 = 3 × 6 + 5
+- 23%7 = 2 because 23 divided by 7 is 3 with a remainder of 2, i.e., 23 = 3 × 7 + 2
+
+**Properties:**
+- It is irreversible operation
+- It always return a non negative number less than the divisor.
+
+
+**Room completed:**
+
+![[Pasted image 20260502232613.png]]
+
+
+
+---
+
+
