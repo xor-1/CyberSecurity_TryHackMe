@@ -2259,3 +2259,23 @@ We can export the results to files as follows:
 ---
 
 
+## Cryptography:
+
+
+#### Cryptography Basics:
+
+The practice and study of techniques used secure the communication and data protection where we expect the presence of adversaries.
+
+**Cryptography is used to ensure:**
+- Confidentiality
+- Integrity
+- Authenticity
+
+**New Terms:**
+1. plaintext
+2. ciphertext
+3. cipher
+4. key
+5. encryption
+6. decryption
+
