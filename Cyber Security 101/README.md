@@ -2341,3 +2341,30 @@ X % Y = N, where N is the remainder.
 ---
 
 
+
+## Public Key Cryptography
+
+
+#### RSA (Rivest, Shamir, Adleman):
+
+Choose two primary numbers of any digits for understanding I am choosing `p = 5`, `q = 7`. 
+
+**Bob Chooses:**
+- `p = 5`
+- `q = 7`
+- `n = p x q = 5 x 7 = 35`
+- `!(n) = n - p - q + 1 = 35 - 7 - 5 + 1 = 24
+- `e = 19 such that e and !(n) are co prime.`
+-  Choose `d` such that `d.e mod !(n) = 1`.  So, `d = 19`
+- Public key `(19, 35)`
+- Private key `(19, 35)`
+
+Now Alice wants to send the number `2` to Bob. She will encrypt it using the Bob's public key and Bob will decrypt it using its private key.
+
+- `x = 2`
+- `Alice` uses `y = x ^ e mod n = 2 ^ 19 mod 35 = 524288 mod 35 = 23` and sends it to `Bob`.
+- Bob receives `524288`. Calculates `x = y ^ d mod n = 23 ^ 19 mod 35 = 2`
+- Hence Bob decrypted it as `2` successfully.
+
+
+#### 
