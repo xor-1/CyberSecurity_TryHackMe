@@ -2367,4 +2367,16 @@ Now Alice wants to send the number `2` to Bob. She will encrypt it using the Bob
 - Hence Bob decrypted it as `2` successfully.
 
 
-#### 
+#### Diffie-Hellman
+
+A key exchange algorithm for symmetric ciphers without using asymmetric ciphers for key transfers.
+
+1. Alice and bob agree on public variables, where `0 < g < p`. Let `p = 29`, `g = 3`. 
+2. Now they choose their private integers, `a = 13`, `b = 15` for Alice and Bob respectively.
+3. Alice calculates public key as `A = g  ^ a mod p = 3 ^ 13 mod 29 = 19`. Bob Calculates `B = g ^ b mod p = 3 ^ 15 mod 29 = 26`. These are the public key pairs. i.e `(19,26)`.
+4. Alice and Bob sends their public keys to each other. This step is called key exchange.
+5. Now Alice and Bob calculates the shared secret as `X = B ^ a mod p = 10` and also Bob calculates as `X = A ^ b mod p = 10`.
+
+![[Pasted image 20260508095107.png]]
+
+
