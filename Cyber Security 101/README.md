@@ -2420,3 +2420,54 @@ When key based authentication is on, we have a file named `authorized_keys` in `
 
 > If we want the root user to login to the server, we should use the key based authentication instead of passwords.
 
+#### Digital Signatures & Certificates
+
+Digital Signatures are required to provide the integrity and authenticity of the digital messages and documents.
+Asymmetric encryption is used this purpose. My private key is used to create a digital signature of the file or message and can be verified using my public key. Because only I have the access to my private key so the signature will be unique.
+
+##### Certificates:
+They are used to prove that who you are. The certificates are signed by Certificate Authorities (CA). Certificates have a chain of trust. Certificates are only trusted when Root CA says they trust the organization.
+
+#### PGP and GPG:
+PGP (Pretty Good Privacy) is a software used to encrypt the data or do digital signing. 
+We can generate the gpg keys using:
+
+```
+gpg --full-key-gen
+```
+
+The key is protected using a passphrase which can be cracked using the tools like `John the Ripper` or `gpg2john`.
+Always keep a backup copy of the gpg keys in a file like `backup.key` and when ever you want to set it up again, just use
+
+```
+gpg --import backup.key
+```
+
+and to decrypt the messages use;
+
+```
+gpg --decrypt messages.gpg
+```
+
+By default the key is loaded into the GPG but if not then firstly import it:
+
+```
+gpg --import xyz.key
+```
+
+then decrypt the file or message:
+
+```
+gpg --decrypt filename.gpg
+```
+
+**Room Completed:**
+
+![[Pasted image 20260508214531.png]]
+
+
+
+----
+
+
+
