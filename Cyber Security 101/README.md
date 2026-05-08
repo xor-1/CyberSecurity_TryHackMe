@@ -2380,3 +2380,43 @@ A key exchange algorithm for symmetric ciphers without using asymmetric ciphers 
 ![[Pasted image 20260508095107.png]]
 
 
+#### SSH:
+
+##### Authenticating the server:
+
+At first when we try to make a new connection to the target using the `SSH`. It wants to add the digital signature of the public key of target to the known hosts. 
+
+##### Authentication by client:
+
+To prove that the client is a valid user on the server, we use the public and private key authentication.  We can also use a passphrase to encrypt the keys.
+
+`ssh-keygen` a program to generate key pairs. 
+
+```
+ssh-keygen -t <TYPE_OF_ALGORITHM>
+```
+
+the types of algorithm commonly used are, `DSA, ECDSA, ECDSA-SK, ED25519, ED25519-SK, RSA`.
+
+The `Public` and `Private` keys are generated in the `/home/user/.ssh/`.
+
+##### SSH Private keys:
+
+Never share a private key, anyone can login to the system using your private key that accepts it. We can use a passphrase for the private keys to encrypt them and they can also be cracked using brute force attacks for example using the `John the Ripper` tool.
+
+##### Setting up the keys for remote login:
+
+After generating the keys, copy the public key over the server you want to login and private key always remain on the local system. We can transfer the public key using the `ssh-copy-id` method. 
+
+If the SSH key has weak permissions like group/others can read it, the SSH client will ignore the key and generate a warning like `permissions are too open`. The permissions must be set `600` or stricter as just the owner should be able to read or write to that key file.
+
+To use a specific file to login to the server, Use:
+
+```
+ssh -i PrivateKeyFileName user@host
+```
+
+When key based authentication is on, we have a file named `authorized_keys` in `/.ssh` containing the public keys that are allowed to login to the server. 
+
+> If we want the root user to login to the server, we should use the key based authentication instead of passwords.
+
