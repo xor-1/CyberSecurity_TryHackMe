@@ -2472,4 +2472,3 @@ gpg --decrypt filename.gpg
 
 
 ## Hashing:
-
