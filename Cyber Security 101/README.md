@@ -2473,3 +2473,49 @@ gpg --decrypt filename.gpg
 
 ## Hashing:
 
+
+#### Hash:
+A hash is a fixed size string of characters computed by a hash function. A hash function takes input of arbitrary size and outputs a fixed length.
+
+
+#### Key points:
+
+- Hash collision
+- Pigeon hole effect
+
+#### Insecure passwords practices:
+
+ - Storing passwords in plaintext
+ - Storing passwords using deprecated encryption
+ - Storing passwords using insecure hashing algorithms
+
+#### Keypoints:
+
+- Rainbow tables (lookup table of hashes to passwords)
+- Protection is adding salt (which is unique to each user and not private)
+
+1. We select a secure hashing function, such as Argon2, Scrypt, Bcrypt, or PBKDF2.
+2. We add a unique salt to the password, such as `Y4UV*^(=go_!`
+3. Concatenate the password with the unique salt. For example, if the password is `AL4RMc10k`, the result string would be `AL4RMc10kY4UV*^(=go_!`
+4. Calculate the hash value of the combined password and salt. In this example, using the chosen algorithm, you need to calculate the hash value of `AL4RMc10kY4UV*^(=go_!`.
+5. Store the hash value and the unique salt used (`Y4UV*^(=go_!`).
+
+#### Recongnize password hashes:
+
+- Use hashid "hash"
+
+#### Linux passwords:
+
+- The passwords were used to be stored in `/etc/passwd` but now they are stored in `/etc/shadow`.
+- `$prefix$options$salt$hash`
+
+#### Windows passwords:
+
+- The passwords are stored in **Security Accounts Manager (SAM)**.
+- In NT and LM hashes identical to MD5 hashes.
+
+#### Password cracking:
+
+- Hashcat uses GPU to find unhashed passwords
+- John The Ripper by default uses CPU
+
