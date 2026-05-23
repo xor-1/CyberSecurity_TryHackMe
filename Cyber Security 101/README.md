@@ -2519,3 +2519,12 @@ A hash is a fixed size string of characters computed by a hash function. A hash 
 - Hashcat uses GPU to find unhashed passwords
 - John The Ripper by default uses CPU
 
+#### Keypoints
+
+- If passwords are without hashes we can use online rainbow tables.
+- If passwords are with hashes we have to use the tools like Hashcat and John The Ripper.
+
+```
+hashcat -m "HASH_MODE" -a "ATTACK_MODE" HASH_FILE WORDLIST
+```
+
