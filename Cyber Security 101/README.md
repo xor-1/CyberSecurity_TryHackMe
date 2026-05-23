@@ -2528,3 +2528,30 @@ A hash is a fixed size string of characters computed by a hash function. A hash 
 hashcat -m "HASH_MODE" -a "ATTACK_MODE" HASH_FILE WORDLIST
 ```
 
+
+#### HMAC
+
+The following steps give you a fair idea of how HMAC works.
+
+1. The secret key is padded to the block size of the hash function.
+2. The padded key is XORed with a constant (usually a block of zeros or ones).
+3. The message is hashed using the hash function with the XORed key.
+4. The result from Step 3 is then hashed again with the same hash function but using the padded key XORed with another constant.
+5. The final output is the HMAC value, typically a fixed-size string.
+
+The illustration below should clarify the above steps.
+
+![[Pasted image 20260523225245.png]]
+
+
+#### Room Completed:
+
+![[Pasted image 20260523225626.png]]
+
+
+---
+
+
+
+
+> ***"THIS IS THE END OF MY NOTES TAKING FOR NOW AS NOW TOOLING IS STARTED AND THEN I WILL DIVE INTO OFFENSIVE AND DEFENSIVE TOOLING AND TECHNIQUES SO I WILL MAKE NOTES IN PREP FOR CPTS OR ANOTHER PEN TESTING EXAM. THESE NOTES JUST CLEARS THE BASICS SO FAR!"***
