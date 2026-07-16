@@ -219,3 +219,16 @@ cat /var/www/flag.txt
 | Incomplete file extension blocklist          | Critical | Use an allowlist rather than a blocklist. Only permit specific, expected extensions. Validate file content (MIME type) in addition to the extension. Store uploaded files outside the web root. |
 | API endpoint disclosure                      | Medium   | Remove the API index endpoint or restrict it to authenticated administrators. Do not expose internal route structures to unauthenticated users.                                                 |
 
+
+---
+
+
+## Reconnaissance
+
+
+### Passive Reconn:
+
+- `whois` and `RDAP`
+- `nslookup` and `dig`
+- `crt.sh` and `DNSdumpster`
+
