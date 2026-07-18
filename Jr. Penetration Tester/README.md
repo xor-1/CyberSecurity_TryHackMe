@@ -232,3 +232,39 @@ cat /var/www/flag.txt
 - `nslookup` and `dig`
 - `crt.sh` and `DNSdumpster`
 
+> `QUIC` protocol is designed by google that combines the functions of TLS and TCP into a single protocol running on UDP port 443. It is used by modern websites using HTTP/3.
+
+
+For `Network` tab in `Developer Tools`:
+
+```
+CTRL + SHIFT + I
+```
+
+
+```
+ICMP Echo Request: type 8
+ICMP Echo Response: type 0
+```
+
+> `QUIC` used by `HTTP3` combining the capabilities of TLS and TCP over UDP 443.
+
+
+> When `TTL` reaches `0`  the router drops the packets and sends the `ICMP Time to Live Exceeded` message back to the sender.
+
+
+> The packets are send by gradually increasing `TTL` values and making the routers reveal the IP addresses one by one by sending back the `ICMP Time to Live Exceeded` until the packet reaches the destination or a maximum `TTL` value is achieved.
+
+
+> By default on linux `traceroute` sends `UDP` packets, to switch to `TCP` use `traceroute -T IP` and for `ICMP` based, use `traceroute -I IP`.
+
+
+> Use `mtr IP` for real time continuous view of this `traceroute`.
+
+
+> Telnet TELETYPE NETWORK -> 23, used for banner grabbing as we can connect because of TCP.
+
+
+
+
+
