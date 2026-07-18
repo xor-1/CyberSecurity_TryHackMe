@@ -265,6 +265,18 @@ ICMP Echo Response: type 0
 > Telnet TELETYPE NETWORK -> 23, used for banner grabbing as we can connect because of TCP.
 
 
+#### SMTP
+
+- Port `25` for MTA to MTA
+- Port `587` for MUA to MSA
+- Port `465` for SMTPS
+
+
+#### POP3
+
+- Port `110` for POP3
+- Port `995` for POP3S
+
 
 
 
