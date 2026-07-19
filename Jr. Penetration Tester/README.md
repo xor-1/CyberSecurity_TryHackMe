@@ -301,3 +301,82 @@ ICMP Echo Response: type 0
 
 
 
+> SSL and TLS are on Presentation Layer
+
+
+> SSL 2.0 and 3.0 are deprecated. TLS 1.0 and 1.1 are also deprecated. TLS 1.2 and 1.3 can be used on present systems for security.
+
+
+**Upgrading Protocols with TLS**
+
+An existing cleartext protocol can be upgraded to use encryption via TLS. The following table lists the protocols covered so far and their default ports before and after the encryption upgrade via TLS.
+
+|Protocol|Default Port|Secured Protocol|Default Port with TLS|
+|---|---|---|---|
+|HTTP|80|HTTPS|443|
+|FTP|21|FTPS|990|
+|SMTP|25|SMTPS|465|
+|POP3|110|POP3S|995|
+|IMAP|143|IMAPS|993|
+
+TLS is not limited to web and email protocols. DNS can also be secured using TLS. **DNS over TLS (DoT)** encrypts DNS queries by wrapping standard DNS traffic inside a TLS connection, typically on port 853. A related approach, **DNS over HTTPS (DoH)**, sends DNS queries as HTTPS requests on port 443. Both prevent eavesdropping on DNS lookups, which would otherwise reveal which websites a user is visiting.
+
+## Implicit TLS vs STARTTLS
+
+There are two approaches to adding TLS to a protocol:
+
+**Implicit TLS** uses a dedicated port (as shown in the table above). The connection is encrypted from the start. When you connect to port 443 for HTTPS or port 993 for IMAPS, TLS negotiation begins immediately.
+
+**STARTTLS** allows upgrading an existing cleartext connection to TLS on the same port. The client connects on the standard port (e.g., port 25 for SMTP), and then issues a `STARTTLS` command to upgrade the connection to TLS. This approach is common for email protocols. For SMTP, port 587 (submission) with STARTTLS is the recommended configuration for mail clients.
+
+Both approaches provide encryption. However, implicit TLS is generally preferred because STARTTLS can be vulnerable to downgrade attacks if not properly implemented. An attacker performing a MITM attack could strip the `STARTTLS` command from the communication, forcing the connection to remain in cleartext.
+
+
+
+
+---
+
+
+#### NMAP
+
+
+![[Pasted image 20260719211606.png]]
+
+
+
+
+> If the host is in the same network the nmap will use the ARP broadcast to map IPs with the MAC addresses of the hosts.
+
+
+> If the target is in another subnet or network then the namp will use different IP based probes like ICMP echo request, ICMP timestamp request, TCP SYN, TCP ACK etc...
+
+
+
+###### Discovering hosts using different layers of the TCP/IP  OSI layers
+
+
+![[Pasted image 20260719214127.png]]
+
+
+
+> ICMP echo request: type 8
+> ICMP echo reply:      type 0
+
+
+----
+
+
+> check the number of hosts
+
+```
+nmap -sL -n IP
+```
+
+
+> using a list of IPs:
+
+```
+nmap -iL nmap.txt
+```
+
+
