@@ -380,3 +380,52 @@ nmap -iL nmap.txt
 ```
 
 
+> Discover live hosts
+
+```
+nmap -sn IP -n
+```
+
+
+-n is for not using the DNS resolution.
+
+
+> **Nmap host discovery probes:**
+
+for local network ARP broadcast:
+
+```
+-PR
+```
+
+for remote networks (ICMP Address Mask, ICMP type 8, ICMP timestamp, ACK and SYN): 
+
+```
+-PM
+
+
+-PE
+
+
+-PP
+
+
+-PA
+
+
+-PS
+```
+
+
+> Address mask request = type 17
+> Address mask reply = type 18
+
+ARP scanning is particularly useful during post‑exploitation and internal network enumeration. Once an attacker gains access to a system within a network, ARP scans can be used to quickly and reliably identify other live hosts on the same local segment. Because ARP operates at Layer 2 and is often not filtered by firewalls, it is an effective tool for red-team operations and internal penetration testing.
+
+
+
+# ==*"WE HAVE TO DEVELOP BOTH MINDSETS AS AN INTERNAL PENTESTER AND EXTERNAL PENTESTER"*==
+
+
+
+
