@@ -398,7 +398,7 @@ for local network ARP broadcast:
 -PR
 ```
 
-for remote networks (ICMP Address Mask, ICMP type 8, ICMP timestamp, ACK and SYN): 
+for remote networks (ICMP Address Mask, ICMP type 8, ICMP timestamp, ACK, SYN and UDP ping): 
 
 ```
 -PM
@@ -414,6 +414,9 @@ for remote networks (ICMP Address Mask, ICMP type 8, ICMP timestamp, ACK and SYN
 
 
 -PS
+
+
+-PU
 ```
 
 
@@ -426,6 +429,19 @@ ARP scanning is particularly useful during post‑exploitation and internal net
 
 # ==*"WE HAVE TO DEVELOP BOTH MINDSETS AS AN INTERNAL PENTESTER AND EXTERNAL PENTESTER"*==
 
+
+Masscan: discover the available systems.
+
+
+> -R for reverse DNS lookups of hosts even offline, to use a specific DNS server use option:
+
+
+```
+--dns-servers 8.8.8.8
+```
+
+
+---
 
 
 
