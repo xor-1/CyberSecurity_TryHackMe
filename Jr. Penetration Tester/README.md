@@ -459,4 +459,41 @@ Masscan: discover the available systems.
 |-sn|host discovery only|
 
 
+![[Pasted image 20260720100205.png]]
+
+
+**NULL scan:**
+
+```
+sudo nmap -sN IP
+```
+
+no reply = open | filtered
+RST, ACK = closed
+
+
+**FIN Scan:**
+
+```
+sudo nmap -sF IP
+```
+
+
+no reply = open | filtered
+RST, ACK = closed
+
+
+**Xmas Scan:**
+
+
+```
+sudo nmap -sX IP
+```
+
+PSH, URG, FIN flags are set simultaneously.
+
+no reply = open | filtered
+RST, ACK = closed
+
+
 
