@@ -497,3 +497,55 @@ RST, ACK = closed
 
 
 
+**Maimon Scan: FIN ACK FIN ACK FIN ACK FIN ACK FIN ACK FIN ACK FIN ACK FIN ACK**
+
+**FIN** and **ACK** flags are set.
+
+```
+nmap -sM IP
+```
+
+
+
+HOW TO CHECK IF A PORT IS BEHIND THE FIREWAL:
+
+Answer: USE ACK SCAN
+
+
+```
+nmap -sA IP
+```
+
+
+target sends an RST packet if the packet reaches the target means its not behind the firewall and is unfiltered. Otherwise filtered. 
+
+| Response         | Interpretation |
+| ---------------- | -------------- |
+| RST              | Unfiltered     |
+| No response      | Filtered       |
+| ICMP unreachable | Filtered       |
+
+
+**WINDOW Scan:**
+
+```
+nmap -sW IP
+```
+
+
+It is similar to ACK scan, but examines the **WINDOW** field of the **RST** packet to interpret whether the port is open or not,
+
+Port = Open (Window = 8192)
+Port = Close (Window = 0)
+
+
+**Custom Scan:**
+
+```
+nmap --scanflags FLAGS IP
+```
+
+
+---
+
+
