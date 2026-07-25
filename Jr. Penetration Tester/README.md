@@ -977,3 +977,26 @@ nmap -sS 127.0.0.1 -oS FILENAME
 
 
 
+---
+
+
+
+### Walk in to an Application:
+
+
+- Start with finding interactive portions of the website.
+- review javascript
+- write the endpoints and summary of each component you found like:
+
+|   |   |   |
+|---|---|---|
+|**Feature**|**Endpoint**|**Summary**|
+|Home Page|/|This page contains a summary of what Acme IT Support does, along with a company photo of its staff.|
+|Latest News|`/news`|This page contains a list of recently published news articles by the company, and each news article has a link with an ID number, i.e. `/news/article?id=1`|
+|News Article|`/news/article?id=1`|Displays the individual news article. Some articles seem to be blocked and reserved for premium customers only.|
+
+
+
+In short, map the whole website and visit all pages in the burp and crawl the website to find the endpoints.
+
+
