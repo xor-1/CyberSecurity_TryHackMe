@@ -999,4 +999,28 @@ nmap -sS 127.0.0.1 -oS FILENAME
 
 In short, map the whole website and visit all pages in the burp and crawl the website to find the endpoints.
 
+Use Developer tools in the browser to uncover the vulnerabiities.
+
+> My recommendation: Always use FireFox for debugging.
+
+
+Check **robots.txt**, it may contain the directories that the developer dont want you to access.
+
+This robots.txt file tells web crawlers (like search engines) how to interact with the site. It allows all bots to access most of the site (`Allow: /`) but asks them not to visit `/staff-portal`. Keep in mind, this is only a guideline for bots, not a security control, so restricted paths may still be accessible if visited directly.
+
+Check **sitemap.xml** for allowed and most important pages to be listed.
+
+
+
+#### Google Dorking Filters:
+
+| Filter     | Example               | Description                                               |
+| ---------- | --------------------- | --------------------------------------------------------- |
+| `site`     | `site:tryhackme.com`  | Returns results only from the specified domain            |
+| `inurl`    | `inurl:admin`         | Returns results with the specified word in the URL        |
+| `filetype` | `filetype:pdf`        | Returns results of a specific file type                   |
+| `intitle`  | `intitle:admin`       | Returns results with the specified word in the page title |
+| `intext`   | `intext:password`     | Returns results containing the specified word in the body |
+| `cache`    | `cache:tryhackme.com` | Shows Google's cached version of the page                 |
+
 
