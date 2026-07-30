@@ -1024,3 +1024,14 @@ Check **sitemap.xml** for allowed and most important pages to be listed.
 | `cache`    | `cache:tryhackme.com` | Shows Google's cached version of the page                 |
 
 
+## Summary:
+
+
+| Method    | Techniques                                                                     |
+| --------- | ------------------------------------------------------------------------------ |
+| Manual    | robots.txt, sitemap.xml, favicon fingerprinting, HTTP headers, framework stack |
+| OSINT     | Google dorking, Wappalyzer, Wayback Machine, GitHub, S3 buckets                |
+| Automated | Gobuster dir, dns, and vhost modes                                             |
+
+
+
